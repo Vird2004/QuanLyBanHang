@@ -183,10 +183,10 @@
             this.BTN_GUIDE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BTN_GUIDE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BTN_GUIDE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_GUIDE.FillColor = System.Drawing.Color.MediumPurple;
+            this.BTN_GUIDE.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.BTN_GUIDE.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BTN_GUIDE.ForeColor = System.Drawing.Color.White;
-            this.BTN_GUIDE.Image = global::QuanLyBanHang.Properties.Resources.quest;
+            this.BTN_GUIDE.Image = global::QuanLyBanHang.Properties.Resources.question;
             this.BTN_GUIDE.ImageSize = new System.Drawing.Size(30, 30);
             this.BTN_GUIDE.IndicateFocus = true;
             this.BTN_GUIDE.Location = new System.Drawing.Point(533, 19);
@@ -203,10 +203,10 @@
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.FillColor = System.Drawing.Color.MediumPurple;
+            this.btnExit.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = global::QuanLyBanHang.Properties.Resources.XXXXXXXXXXXX;
+            this.btnExit.Image = global::QuanLyBanHang.Properties.Resources.XXXXXXXXXXXX1;
             this.btnExit.ImageSize = new System.Drawing.Size(30, 30);
             this.btnExit.IndicateFocus = true;
             this.btnExit.Location = new System.Drawing.Point(604, 19);
