@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanHang
 {
-    partial class Form1
+    partial class frm_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.LBL_AppName = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.BTN_LOGIN = new Guna.UI2.WinForms.Guna2Button();
@@ -191,6 +191,7 @@
             this.BTN_GUIDE.Size = new System.Drawing.Size(48, 47);
             this.BTN_GUIDE.TabIndex = 4;
             this.BTN_GUIDE.UseTransparentBackground = true;
+            this.BTN_GUIDE.Click += new System.EventHandler(this.BTN_GUIDE_Click);
             // 
             // btnExit
             // 

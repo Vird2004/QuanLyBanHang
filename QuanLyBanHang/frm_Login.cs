@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyBanHang
 {
-    public partial class Form1 : Form
+    public partial class frm_Login : Form
     {
-        public Form1()
+        public frm_Login()
         {
             InitializeComponent();
             txtUsername.Focus();
@@ -25,7 +25,12 @@ namespace QuanLyBanHang
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thoát", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -66,7 +71,10 @@ namespace QuanLyBanHang
             }
         }
 
+        private void BTN_GUIDE_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
