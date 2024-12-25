@@ -15,6 +15,7 @@ namespace QuanLyBanHang
         public Form1()
         {
             InitializeComponent();
+            txtUsername.Focus();
         }
 
         private void gbLogin_Enter(object sender, EventArgs e)
