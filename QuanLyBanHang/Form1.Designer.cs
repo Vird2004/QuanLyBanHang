@@ -39,6 +39,8 @@
             this.GPB_BUNNY = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BTN_GUIDE = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.BTN_ViewUser = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_ViewPass = new Guna.UI2.WinForms.Guna2Button();
             this.gbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPB_BUNNY)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +59,8 @@
             // gbLogin
             // 
             this.gbLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gbLogin.Controls.Add(this.BTN_ViewPass);
+            this.gbLogin.Controls.Add(this.BTN_ViewUser);
             this.gbLogin.Controls.Add(this.BTN_LOGIN);
             this.gbLogin.Controls.Add(this.txtPassword);
             this.gbLogin.Controls.Add(this.txtUsername);
@@ -109,7 +113,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(339, 38);
+            this.txtPassword.Size = new System.Drawing.Size(322, 38);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -134,7 +138,7 @@
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(339, 38);
+            this.txtUsername.Size = new System.Drawing.Size(322, 38);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -213,6 +217,38 @@
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // BTN_ViewUser
+            // 
+            this.BTN_ViewUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ViewUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ViewUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ViewUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ViewUser.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BTN_ViewUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BTN_ViewUser.ForeColor = System.Drawing.Color.White;
+            this.BTN_ViewUser.Image = global::QuanLyBanHang.Properties.Resources.view;
+            this.BTN_ViewUser.ImageSize = new System.Drawing.Size(30, 30);
+            this.BTN_ViewUser.Location = new System.Drawing.Point(372, 73);
+            this.BTN_ViewUser.Name = "BTN_ViewUser";
+            this.BTN_ViewUser.Size = new System.Drawing.Size(49, 34);
+            this.BTN_ViewUser.TabIndex = 13;
+            // 
+            // BTN_ViewPass
+            // 
+            this.BTN_ViewPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ViewPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ViewPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ViewPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ViewPass.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BTN_ViewPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BTN_ViewPass.ForeColor = System.Drawing.Color.White;
+            this.BTN_ViewPass.Image = global::QuanLyBanHang.Properties.Resources.view;
+            this.BTN_ViewPass.ImageSize = new System.Drawing.Size(30, 30);
+            this.BTN_ViewPass.Location = new System.Drawing.Point(372, 155);
+            this.BTN_ViewPass.Name = "BTN_ViewPass";
+            this.BTN_ViewPass.Size = new System.Drawing.Size(49, 34);
+            this.BTN_ViewPass.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AcceptButton = this.BTN_LOGIN;
@@ -250,6 +286,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2CircleButton BTN_GUIDE;
         private Guna.UI2.WinForms.Guna2PictureBox GPB_BUNNY;
+        private Guna.UI2.WinForms.Guna2Button BTN_ViewUser;
+        private Guna.UI2.WinForms.Guna2Button BTN_ViewPass;
     }
 }
 
