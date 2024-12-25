@@ -39,6 +39,8 @@
             this.GPB_BUNNY = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BTN_GUIDE = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.BTN_Viewuser = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_ViewPass = new Guna.UI2.WinForms.Guna2Button();
             this.gbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GPB_BUNNY)).BeginInit();
             this.SuspendLayout();
@@ -62,10 +64,12 @@
             this.gbLogin.Controls.Add(this.txtUsername);
             this.gbLogin.Controls.Add(this.LBL_pass);
             this.gbLogin.Controls.Add(this.LBL_user);
+            this.gbLogin.Controls.Add(this.BTN_Viewuser);
+            this.gbLogin.Controls.Add(this.BTN_ViewPass);
             this.gbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbLogin.Location = new System.Drawing.Point(7, 72);
             this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Size = new System.Drawing.Size(435, 303);
+            this.gbLogin.Size = new System.Drawing.Size(574, 442);
             this.gbLogin.TabIndex = 2;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Thông tin đăng nhập";
@@ -74,7 +78,7 @@
             // BTN_LOGIN
             // 
             this.BTN_LOGIN.AutoRoundedCorners = true;
-            this.BTN_LOGIN.BorderRadius = 29;
+            this.BTN_LOGIN.BorderRadius = 37;
             this.BTN_LOGIN.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.BTN_LOGIN.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BTN_LOGIN.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -82,9 +86,9 @@
             this.BTN_LOGIN.FillColor = System.Drawing.Color.MediumPurple;
             this.BTN_LOGIN.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_LOGIN.ForeColor = System.Drawing.Color.Black;
-            this.BTN_LOGIN.Location = new System.Drawing.Point(106, 212);
+            this.BTN_LOGIN.Location = new System.Drawing.Point(143, 271);
             this.BTN_LOGIN.Name = "BTN_LOGIN";
-            this.BTN_LOGIN.Size = new System.Drawing.Size(216, 60);
+            this.BTN_LOGIN.Size = new System.Drawing.Size(264, 77);
             this.BTN_LOGIN.TabIndex = 12;
             this.BTN_LOGIN.Text = "LOG IN";
             this.BTN_LOGIN.Click += new System.EventHandler(this.BTN_LOGIN_Click);
@@ -92,7 +96,7 @@
             // txtPassword
             // 
             this.txtPassword.AutoRoundedCorners = true;
-            this.txtPassword.BorderRadius = 18;
+            this.txtPassword.BorderRadius = 27;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -103,13 +107,13 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.ForeColor = System.Drawing.Color.MediumPurple;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(44, 155);
+            this.txtPassword.Location = new System.Drawing.Point(44, 179);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(339, 38);
+            this.txtPassword.Size = new System.Drawing.Size(444, 57);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -117,7 +121,7 @@
             // 
             this.txtUsername.AutoRoundedCorners = true;
             this.txtUsername.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.txtUsername.BorderRadius = 18;
+            this.txtUsername.BorderRadius = 27;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -128,13 +132,13 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.MediumPurple;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(44, 69);
+            this.txtUsername.Location = new System.Drawing.Point(44, 78);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(339, 38);
+            this.txtUsername.Size = new System.Drawing.Size(444, 57);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -142,7 +146,7 @@
             // 
             this.LBL_pass.AutoSize = true;
             this.LBL_pass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_pass.Location = new System.Drawing.Point(5, 114);
+            this.LBL_pass.Location = new System.Drawing.Point(5, 151);
             this.LBL_pass.Name = "LBL_pass";
             this.LBL_pass.Size = new System.Drawing.Size(114, 24);
             this.LBL_pass.TabIndex = 5;
@@ -166,9 +170,9 @@
             this.GPB_BUNNY.Cursor = System.Windows.Forms.Cursors.Default;
             this.GPB_BUNNY.Image = global::QuanLyBanHang.Properties.Resources.nhau_dancing_in_maid_oufit;
             this.GPB_BUNNY.ImageRotate = 0F;
-            this.GPB_BUNNY.Location = new System.Drawing.Point(462, 72);
+            this.GPB_BUNNY.Location = new System.Drawing.Point(621, 72);
             this.GPB_BUNNY.Name = "GPB_BUNNY";
-            this.GPB_BUNNY.Size = new System.Drawing.Size(190, 303);
+            this.GPB_BUNNY.Size = new System.Drawing.Size(270, 442);
             this.GPB_BUNNY.TabIndex = 5;
             this.GPB_BUNNY.TabStop = false;
             // 
@@ -179,13 +183,13 @@
             this.BTN_GUIDE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BTN_GUIDE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BTN_GUIDE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_GUIDE.FillColor = System.Drawing.Color.MediumPurple;
+            this.BTN_GUIDE.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.BTN_GUIDE.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BTN_GUIDE.ForeColor = System.Drawing.Color.White;
-            this.BTN_GUIDE.Image = global::QuanLyBanHang.Properties.Resources.quest;
+            this.BTN_GUIDE.Image = global::QuanLyBanHang.Properties.Resources.question;
             this.BTN_GUIDE.ImageSize = new System.Drawing.Size(30, 30);
             this.BTN_GUIDE.IndicateFocus = true;
-            this.BTN_GUIDE.Location = new System.Drawing.Point(533, 19);
+            this.BTN_GUIDE.Location = new System.Drawing.Point(755, 18);
             this.BTN_GUIDE.Name = "BTN_GUIDE";
             this.BTN_GUIDE.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.BTN_GUIDE.Size = new System.Drawing.Size(48, 47);
@@ -199,13 +203,13 @@
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.FillColor = System.Drawing.Color.MediumPurple;
+            this.btnExit.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = global::QuanLyBanHang.Properties.Resources.XXXXXXXXXXXX;
+            this.btnExit.Image = global::QuanLyBanHang.Properties.Resources.XXXXXXXXXXXX1;
             this.btnExit.ImageSize = new System.Drawing.Size(30, 30);
             this.btnExit.IndicateFocus = true;
-            this.btnExit.Location = new System.Drawing.Point(604, 19);
+            this.btnExit.Location = new System.Drawing.Point(826, 18);
             this.btnExit.Name = "btnExit";
             this.btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnExit.Size = new System.Drawing.Size(48, 47);
@@ -213,12 +217,44 @@
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // BTN_Viewuser
+            // 
+            this.BTN_Viewuser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Viewuser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Viewuser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_Viewuser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_Viewuser.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BTN_Viewuser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BTN_Viewuser.ForeColor = System.Drawing.Color.White;
+            this.BTN_Viewuser.Image = global::QuanLyBanHang.Properties.Resources.view;
+            this.BTN_Viewuser.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_Viewuser.Location = new System.Drawing.Point(475, 78);
+            this.BTN_Viewuser.Name = "BTN_Viewuser";
+            this.BTN_Viewuser.Size = new System.Drawing.Size(76, 57);
+            this.BTN_Viewuser.TabIndex = 13;
+            // 
+            // BTN_ViewPass
+            // 
+            this.BTN_ViewPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ViewPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ViewPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ViewPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ViewPass.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BTN_ViewPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BTN_ViewPass.ForeColor = System.Drawing.Color.White;
+            this.BTN_ViewPass.Image = global::QuanLyBanHang.Properties.Resources.view;
+            this.BTN_ViewPass.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_ViewPass.Location = new System.Drawing.Point(475, 179);
+            this.BTN_ViewPass.Name = "BTN_ViewPass";
+            this.BTN_ViewPass.Size = new System.Drawing.Size(76, 57);
+            this.BTN_ViewPass.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(664, 393);
+            this.ClientSize = new System.Drawing.Size(903, 536);
             this.Controls.Add(this.GPB_BUNNY);
             this.Controls.Add(this.BTN_GUIDE);
             this.Controls.Add(this.btnExit);
@@ -249,6 +285,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2CircleButton BTN_GUIDE;
         private Guna.UI2.WinForms.Guna2PictureBox GPB_BUNNY;
+        private Guna.UI2.WinForms.Guna2Button BTN_Viewuser;
+        private Guna.UI2.WinForms.Guna2Button BTN_ViewPass;
     }
 }
 

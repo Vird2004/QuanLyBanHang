@@ -32,18 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DGV_SqlData = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.BTN_find = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_guide = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_ItemList = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_DELETE = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Order = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_bill = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_FixItem = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_ADD = new Guna.UI2.WinForms.Guna2Button();
-            this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
-            this.BTN_find = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_guide = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_minimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_EXIT = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.DGV_SqlData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_SqlData)).BeginInit();
             this.SuspendLayout();
@@ -64,127 +64,6 @@
             this.panel1.Size = new System.Drawing.Size(245, 695);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // BTN_ItemList
-            // 
-            this.BTN_ItemList.AutoRoundedCorners = true;
-            this.BTN_ItemList.BorderRadius = 31;
-            this.BTN_ItemList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ItemList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ItemList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_ItemList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_ItemList.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_ItemList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_ItemList.ForeColor = System.Drawing.Color.White;
-            this.BTN_ItemList.Image = global::QuanLyBanHang.Properties.Resources.list_check;
-            this.BTN_ItemList.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_ItemList.Location = new System.Drawing.Point(4, 377);
-            this.BTN_ItemList.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_ItemList.Name = "BTN_ItemList";
-            this.BTN_ItemList.Size = new System.Drawing.Size(234, 65);
-            this.BTN_ItemList.TabIndex = 5;
-            this.BTN_ItemList.Text = "THỐNG KÊ";
-            // 
-            // BTN_DELETE
-            // 
-            this.BTN_DELETE.AutoRoundedCorners = true;
-            this.BTN_DELETE.BorderRadius = 31;
-            this.BTN_DELETE.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_DELETE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_DELETE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_DELETE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_DELETE.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_DELETE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_DELETE.ForeColor = System.Drawing.Color.White;
-            this.BTN_DELETE.Image = global::QuanLyBanHang.Properties.Resources.basket_shopping_minus;
-            this.BTN_DELETE.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_DELETE.Location = new System.Drawing.Point(4, 231);
-            this.BTN_DELETE.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_DELETE.Name = "BTN_DELETE";
-            this.BTN_DELETE.Size = new System.Drawing.Size(234, 65);
-            this.BTN_DELETE.TabIndex = 4;
-            this.BTN_DELETE.Text = "XÓA MẶT HÀNG";
-            this.BTN_DELETE.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // BTN_Order
-            // 
-            this.BTN_Order.AutoRoundedCorners = true;
-            this.BTN_Order.BorderRadius = 31;
-            this.BTN_Order.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_Order.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_Order.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_Order.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_Order.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_Order.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BTN_Order.ForeColor = System.Drawing.Color.White;
-            this.BTN_Order.Image = global::QuanLyBanHang.Properties.Resources.box_circle_check;
-            this.BTN_Order.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_Order.Location = new System.Drawing.Point(4, 10);
-            this.BTN_Order.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Order.Name = "BTN_Order";
-            this.BTN_Order.Size = new System.Drawing.Size(234, 64);
-            this.BTN_Order.TabIndex = 3;
-            this.BTN_Order.Text = "ĐẶT HÀNG";
-            // 
-            // BTN_bill
-            // 
-            this.BTN_bill.AutoRoundedCorners = true;
-            this.BTN_bill.BorderRadius = 31;
-            this.BTN_bill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_bill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_bill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_bill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_bill.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_bill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_bill.ForeColor = System.Drawing.Color.White;
-            this.BTN_bill.Image = global::QuanLyBanHang.Properties.Resources.receipt;
-            this.BTN_bill.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_bill.Location = new System.Drawing.Point(4, 304);
-            this.BTN_bill.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_bill.Name = "BTN_bill";
-            this.BTN_bill.Size = new System.Drawing.Size(234, 65);
-            this.BTN_bill.TabIndex = 2;
-            this.BTN_bill.Text = "IN HÓA ĐƠN";
-            // 
-            // BTN_FixItem
-            // 
-            this.BTN_FixItem.AutoRoundedCorners = true;
-            this.BTN_FixItem.BorderRadius = 31;
-            this.BTN_FixItem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_FixItem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_FixItem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_FixItem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_FixItem.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_FixItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_FixItem.ForeColor = System.Drawing.Color.White;
-            this.BTN_FixItem.Image = global::QuanLyBanHang.Properties.Resources.restock;
-            this.BTN_FixItem.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_FixItem.Location = new System.Drawing.Point(4, 86);
-            this.BTN_FixItem.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_FixItem.Name = "BTN_FixItem";
-            this.BTN_FixItem.Size = new System.Drawing.Size(234, 64);
-            this.BTN_FixItem.TabIndex = 1;
-            this.BTN_FixItem.Text = "SỬA MẶT HÀNG";
-            // 
-            // BTN_ADD
-            // 
-            this.BTN_ADD.AutoRoundedCorners = true;
-            this.BTN_ADD.BorderRadius = 31;
-            this.BTN_ADD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ADD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ADD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_ADD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_ADD.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_ADD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_ADD.ForeColor = System.Drawing.Color.White;
-            this.BTN_ADD.Image = global::QuanLyBanHang.Properties.Resources.cart_arrow_down;
-            this.BTN_ADD.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_ADD.Location = new System.Drawing.Point(4, 158);
-            this.BTN_ADD.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_ADD.Name = "BTN_ADD";
-            this.BTN_ADD.Size = new System.Drawing.Size(234, 65);
-            this.BTN_ADD.TabIndex = 0;
-            this.BTN_ADD.Text = "THÊM MẶT HÀNG";
             // 
             // TXT_find
             // 
@@ -207,6 +86,58 @@
             this.TXT_find.SelectedText = "";
             this.TXT_find.Size = new System.Drawing.Size(1227, 60);
             this.TXT_find.TabIndex = 5;
+            // 
+            // DGV_SqlData
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SqlData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_SqlData.ColumnHeadersHeight = 4;
+            this.DGV_SqlData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_SqlData.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_SqlData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.Location = new System.Drawing.Point(278, 80);
+            this.DGV_SqlData.Name = "DGV_SqlData";
+            this.DGV_SqlData.RowHeadersVisible = false;
+            this.DGV_SqlData.RowHeadersWidth = 51;
+            this.DGV_SqlData.RowTemplate.Height = 24;
+            this.DGV_SqlData.Size = new System.Drawing.Size(1418, 699);
+            this.DGV_SqlData.TabIndex = 7;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.Height = 4;
+            this.DGV_SqlData.ThemeStyle.ReadOnly = false;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_SqlData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.Height = 24;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // BTN_find
             // 
@@ -246,6 +177,136 @@
             this.BTN_guide.Size = new System.Drawing.Size(76, 63);
             this.BTN_guide.TabIndex = 4;
             // 
+            // BTN_ItemList
+            // 
+            this.BTN_ItemList.AutoRoundedCorners = true;
+            this.BTN_ItemList.BorderRadius = 31;
+            this.BTN_ItemList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ItemList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ItemList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ItemList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ItemList.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_ItemList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ItemList.ForeColor = System.Drawing.Color.White;
+            this.BTN_ItemList.Image = global::QuanLyBanHang.Properties.Resources.list_check;
+            this.BTN_ItemList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_ItemList.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_ItemList.Location = new System.Drawing.Point(4, 377);
+            this.BTN_ItemList.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_ItemList.Name = "BTN_ItemList";
+            this.BTN_ItemList.Size = new System.Drawing.Size(234, 65);
+            this.BTN_ItemList.TabIndex = 5;
+            this.BTN_ItemList.Text = "THỐNG KÊ";
+            // 
+            // BTN_DELETE
+            // 
+            this.BTN_DELETE.AutoRoundedCorners = true;
+            this.BTN_DELETE.BorderRadius = 31;
+            this.BTN_DELETE.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_DELETE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_DELETE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_DELETE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_DELETE.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_DELETE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_DELETE.ForeColor = System.Drawing.Color.White;
+            this.BTN_DELETE.Image = global::QuanLyBanHang.Properties.Resources.basket_shopping_minus;
+            this.BTN_DELETE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_DELETE.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_DELETE.Location = new System.Drawing.Point(4, 231);
+            this.BTN_DELETE.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_DELETE.Name = "BTN_DELETE";
+            this.BTN_DELETE.Size = new System.Drawing.Size(234, 65);
+            this.BTN_DELETE.TabIndex = 4;
+            this.BTN_DELETE.Text = "XÓA MẶT HÀNG";
+            this.BTN_DELETE.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_DELETE.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // BTN_Order
+            // 
+            this.BTN_Order.AutoRoundedCorners = true;
+            this.BTN_Order.BorderRadius = 31;
+            this.BTN_Order.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Order.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Order.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_Order.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_Order.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_Order.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BTN_Order.ForeColor = System.Drawing.Color.White;
+            this.BTN_Order.Image = global::QuanLyBanHang.Properties.Resources.box_circle_check;
+            this.BTN_Order.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_Order.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_Order.Location = new System.Drawing.Point(4, 10);
+            this.BTN_Order.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Order.Name = "BTN_Order";
+            this.BTN_Order.Size = new System.Drawing.Size(234, 64);
+            this.BTN_Order.TabIndex = 3;
+            this.BTN_Order.Text = "ĐẶT HÀNG";
+            // 
+            // BTN_bill
+            // 
+            this.BTN_bill.AutoRoundedCorners = true;
+            this.BTN_bill.BorderRadius = 31;
+            this.BTN_bill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_bill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_bill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_bill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_bill.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_bill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_bill.ForeColor = System.Drawing.Color.White;
+            this.BTN_bill.Image = global::QuanLyBanHang.Properties.Resources.receipt;
+            this.BTN_bill.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_bill.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_bill.Location = new System.Drawing.Point(4, 304);
+            this.BTN_bill.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_bill.Name = "BTN_bill";
+            this.BTN_bill.Size = new System.Drawing.Size(234, 65);
+            this.BTN_bill.TabIndex = 2;
+            this.BTN_bill.Text = "IN HÓA ĐƠN";
+            // 
+            // BTN_FixItem
+            // 
+            this.BTN_FixItem.AutoRoundedCorners = true;
+            this.BTN_FixItem.BorderRadius = 31;
+            this.BTN_FixItem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_FixItem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_FixItem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_FixItem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_FixItem.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_FixItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_FixItem.ForeColor = System.Drawing.Color.White;
+            this.BTN_FixItem.Image = global::QuanLyBanHang.Properties.Resources.restock;
+            this.BTN_FixItem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_FixItem.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_FixItem.Location = new System.Drawing.Point(4, 86);
+            this.BTN_FixItem.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_FixItem.Name = "BTN_FixItem";
+            this.BTN_FixItem.Size = new System.Drawing.Size(234, 64);
+            this.BTN_FixItem.TabIndex = 1;
+            this.BTN_FixItem.Text = "SỬA MẶT HÀNG";
+            this.BTN_FixItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // BTN_ADD
+            // 
+            this.BTN_ADD.AutoRoundedCorners = true;
+            this.BTN_ADD.BorderRadius = 31;
+            this.BTN_ADD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ADD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ADD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ADD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ADD.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_ADD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ADD.ForeColor = System.Drawing.Color.White;
+            this.BTN_ADD.Image = global::QuanLyBanHang.Properties.Resources.cart_arrow_down;
+            this.BTN_ADD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTN_ADD.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_ADD.Location = new System.Drawing.Point(4, 158);
+            this.BTN_ADD.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_ADD.Name = "BTN_ADD";
+            this.BTN_ADD.Size = new System.Drawing.Size(234, 65);
+            this.BTN_ADD.TabIndex = 0;
+            this.BTN_ADD.Text = "THÊM MẶT HÀNG";
+            this.BTN_ADD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // BTN_minimize
             // 
             this.BTN_minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -283,57 +344,6 @@
             this.BTN_EXIT.Size = new System.Drawing.Size(76, 63);
             this.BTN_EXIT.TabIndex = 0;
             this.BTN_EXIT.Click += new System.EventHandler(this.BTN_EXIT_Click);
-            // 
-            // DGV_SqlData
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_SqlData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_SqlData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_SqlData.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DGV_SqlData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.Location = new System.Drawing.Point(278, 80);
-            this.DGV_SqlData.Name = "DGV_SqlData";
-            this.DGV_SqlData.RowHeadersVisible = false;
-            this.DGV_SqlData.RowHeadersWidth = 51;
-            this.DGV_SqlData.RowTemplate.Height = 24;
-            this.DGV_SqlData.Size = new System.Drawing.Size(1418, 699);
-            this.DGV_SqlData.TabIndex = 7;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DGV_SqlData.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.Height = 4;
-            this.DGV_SqlData.ThemeStyle.ReadOnly = false;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV_SqlData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.Height = 24;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // Main
             // 
