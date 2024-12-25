@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTN_ItemList = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_DELETE = new Guna.UI2.WinForms.Guna2Button();
@@ -35,13 +38,14 @@
             this.BTN_bill = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_FixItem = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_ADD = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
             this.BTN_find = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_guide = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_minimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_EXIT = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.DGV_SqlData = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SqlData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -182,15 +186,6 @@
             this.BTN_ADD.TabIndex = 0;
             this.BTN_ADD.Text = "THÊM MẶT HÀNG";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Location = new System.Drawing.Point(281, 84);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1415, 695);
-            this.panel2.TabIndex = 3;
-            // 
             // TXT_find
             // 
             this.TXT_find.AutoRoundedCorners = true;
@@ -289,16 +284,67 @@
             this.BTN_EXIT.TabIndex = 0;
             this.BTN_EXIT.Click += new System.EventHandler(this.BTN_EXIT_Click);
             // 
+            // DGV_SqlData
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SqlData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_SqlData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_SqlData.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_SqlData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.Location = new System.Drawing.Point(278, 80);
+            this.DGV_SqlData.Name = "DGV_SqlData";
+            this.DGV_SqlData.RowHeadersVisible = false;
+            this.DGV_SqlData.RowHeadersWidth = 51;
+            this.DGV_SqlData.RowTemplate.Height = 24;
+            this.DGV_SqlData.Size = new System.Drawing.Size(1418, 699);
+            this.DGV_SqlData.TabIndex = 7;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.Height = 4;
+            this.DGV_SqlData.ThemeStyle.ReadOnly = false;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_SqlData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.Height = 24;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1708, 791);
+            this.Controls.Add(this.DGV_SqlData);
             this.Controls.Add(this.BTN_find);
             this.Controls.Add(this.TXT_find);
             this.Controls.Add(this.BTN_guide);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BTN_minimize);
             this.Controls.Add(this.BTN_EXIT);
@@ -310,6 +356,7 @@
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_SqlData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,7 +367,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton BTN_EXIT;
         private Guna.UI2.WinForms.Guna2CircleButton BTN_minimize;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button BTN_ADD;
         private Guna.UI2.WinForms.Guna2Button BTN_bill;
         private Guna.UI2.WinForms.Guna2Button BTN_Order;
@@ -330,5 +376,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton BTN_guide;
         private Guna.UI2.WinForms.Guna2TextBox TXT_find;
         private Guna.UI2.WinForms.Guna2Button BTN_find;
+        private Guna.UI2.WinForms.Guna2DataGridView DGV_SqlData;
     }
 }
