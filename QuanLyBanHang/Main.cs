@@ -24,16 +24,30 @@ namespace QuanLyBanHang
 
         private void BTN_EXIT_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát", MessageBoxButtons.YesNo);
+            frm_Login frmLogin = new frm_Login();
+            DialogResult dialog = MessageBox.Show("Bạn có muốn quay lại không?", "Thoát", MessageBoxButtons.YesNo);
             if(dialog == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Close();
+                frmLogin.ShowDialog();
+                
             }
         }
 
         private void BTN_minimize_Click(object sender, EventArgs e)
         {
-
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                // Thu nhỏ lại
+                this.WindowState = FormWindowState.Normal;
+                BTN_minimize.Text = "Phóng to"; // Cập nhật text của Button
+            }
+            else
+            {
+                // Phóng to
+                this.WindowState = FormWindowState.Maximized;
+                BTN_minimize.Text = "Thu nhỏ"; // Cập nhật text của Button
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
