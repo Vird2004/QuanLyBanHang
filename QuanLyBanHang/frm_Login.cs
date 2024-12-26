@@ -12,6 +12,7 @@ namespace QuanLyBanHang
 {
     public partial class frm_Login : Form
     {
+        bool isPasswordVisible = false;
         public frm_Login()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace QuanLyBanHang
             {
                 Application.Exit();
             }
-            
+
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -74,6 +75,21 @@ namespace QuanLyBanHang
         private void BTN_GUIDE_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTN_ViewPass_Click(object sender, EventArgs e)
+        {
+
+            if(isPasswordVisible)
+            {
+                txtPassword.PasswordChar = '*';
+                isPasswordVisible = true;
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0';
+                isPasswordVisible = false;
+            }
         }
     }
 }

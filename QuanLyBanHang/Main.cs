@@ -25,7 +25,7 @@ namespace QuanLyBanHang
         private void BTN_EXIT_Click(object sender, EventArgs e)
         {
             frm_Login frmLogin = new frm_Login();
-            DialogResult dialog = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát", MessageBoxButtons.YesNo);
+            DialogResult dialog = MessageBox.Show("Bạn có muốn quay lại không?", "Thoát", MessageBoxButtons.YesNo);
             if(dialog == DialogResult.Yes)
             {
                 this.Close();
