@@ -80,7 +80,7 @@ namespace QuanLyBanHang
         private void BTN_ViewPass_Click(object sender, EventArgs e)
         {
 
-            iif(isPasswordVisible)
+            if(isPasswordVisible)
     {
                 txtPassword.PasswordChar = '*';
             }
