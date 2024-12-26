@@ -86,7 +86,7 @@
             this.BTN_ViewPass.ForeColor = System.Drawing.Color.White;
             this.BTN_ViewPass.Image = global::QuanLyBanHang.Properties.Resources.view;
             this.BTN_ViewPass.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_ViewPass.Location = new System.Drawing.Point(372, 155);
+            this.BTN_ViewPass.Location = new System.Drawing.Point(350, 155);
             this.BTN_ViewPass.Name = "BTN_ViewPass";
             this.BTN_ViewPass.Size = new System.Drawing.Size(49, 34);
             this.BTN_ViewPass.TabIndex = 14;
@@ -103,7 +103,7 @@
             this.BTN_ViewUser.ForeColor = System.Drawing.Color.White;
             this.BTN_ViewUser.Image = global::QuanLyBanHang.Properties.Resources.view;
             this.BTN_ViewUser.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_ViewUser.Location = new System.Drawing.Point(372, 73);
+            this.BTN_ViewUser.Location = new System.Drawing.Point(350, 73);
             this.BTN_ViewUser.Name = "BTN_ViewUser";
             this.BTN_ViewUser.Size = new System.Drawing.Size(49, 34);
             this.BTN_ViewUser.TabIndex = 13;
@@ -140,13 +140,13 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.ForeColor = System.Drawing.Color.MediumPurple;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(44, 155);
+            this.txtPassword.Location = new System.Drawing.Point(23, 155);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(322, 38);
+            this.txtPassword.Size = new System.Drawing.Size(299, 38);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -165,13 +165,13 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.ForeColor = System.Drawing.Color.MediumPurple;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(44, 69);
+            this.txtUsername.Location = new System.Drawing.Point(23, 69);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(322, 38);
+            this.txtUsername.Size = new System.Drawing.Size(299, 38);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
