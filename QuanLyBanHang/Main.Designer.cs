@@ -28,24 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DGV_SqlData = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.BTN_find = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_guide = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_ItemList = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_DELETE = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Order = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_bill = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_FixItem = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_ADD = new Guna.UI2.WinForms.Guna2Button();
+            this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DGV_SqlData = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.BTN_find = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_guide = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_minimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_EXIT = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.qLBHDataSet = new QuanLyBanHang.QLBHDataSet();
+            this.hangHoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hangHoaTableAdapter = new QuanLyBanHang.QLBHDataSetTableAdapters.HangHoaTableAdapter();
+            this.tableAdapterManager = new QuanLyBanHang.QLBHDataSetTableAdapters.TableAdapterManager();
+            this.maHHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dVTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNCCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_SqlData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLBHDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hangHoaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,118 +77,6 @@
             this.panel1.Size = new System.Drawing.Size(245, 695);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // TXT_find
-            // 
-            this.TXT_find.AutoRoundedCorners = true;
-            this.TXT_find.BorderRadius = 29;
-            this.TXT_find.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TXT_find.DefaultText = "";
-            this.TXT_find.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TXT_find.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TXT_find.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TXT_find.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TXT_find.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_find.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TXT_find.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_find.Location = new System.Drawing.Point(469, 13);
-            this.TXT_find.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TXT_find.Name = "TXT_find";
-            this.TXT_find.PasswordChar = '\0';
-            this.TXT_find.PlaceholderText = "";
-            this.TXT_find.SelectedText = "";
-            this.TXT_find.Size = new System.Drawing.Size(1227, 60);
-            this.TXT_find.TabIndex = 5;
-            // 
-            // DGV_SqlData
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_SqlData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV_SqlData.ColumnHeadersHeight = 4;
-            this.DGV_SqlData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_SqlData.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DGV_SqlData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.Location = new System.Drawing.Point(278, 80);
-            this.DGV_SqlData.Name = "DGV_SqlData";
-            this.DGV_SqlData.RowHeadersVisible = false;
-            this.DGV_SqlData.RowHeadersWidth = 51;
-            this.DGV_SqlData.RowTemplate.Height = 24;
-            this.DGV_SqlData.Size = new System.Drawing.Size(1418, 699);
-            this.DGV_SqlData.TabIndex = 7;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DGV_SqlData.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DGV_SqlData.ThemeStyle.HeaderStyle.Height = 4;
-            this.DGV_SqlData.ThemeStyle.ReadOnly = false;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DGV_SqlData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.Height = 24;
-            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // BTN_find
-            // 
-            this.BTN_find.AutoRoundedCorners = true;
-            this.BTN_find.BorderRadius = 31;
-            this.BTN_find.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_find.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_find.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_find.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_find.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_find.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_find.ForeColor = System.Drawing.Color.White;
-            this.BTN_find.Image = global::QuanLyBanHang.Properties.Resources.search;
-            this.BTN_find.ImageSize = new System.Drawing.Size(40, 40);
-            this.BTN_find.Location = new System.Drawing.Point(287, 8);
-            this.BTN_find.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_find.Name = "BTN_find";
-            this.BTN_find.Size = new System.Drawing.Size(175, 65);
-            this.BTN_find.TabIndex = 6;
-            this.BTN_find.Text = "TÌM KIẾM";
-            // 
-            // BTN_guide
-            // 
-            this.BTN_guide.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_guide.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_guide.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_guide.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_guide.FillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BTN_guide.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_guide.ForeColor = System.Drawing.Color.White;
-            this.BTN_guide.Image = global::QuanLyBanHang.Properties.Resources.question;
-            this.BTN_guide.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_guide.Location = new System.Drawing.Point(178, 8);
-            this.BTN_guide.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_guide.Name = "BTN_guide";
-            this.BTN_guide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_guide.Size = new System.Drawing.Size(76, 63);
-            this.BTN_guide.TabIndex = 4;
             // 
             // BTN_ItemList
             // 
@@ -307,6 +208,127 @@
             this.BTN_ADD.Text = "THÊM MẶT HÀNG";
             this.BTN_ADD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // TXT_find
+            // 
+            this.TXT_find.AutoRoundedCorners = true;
+            this.TXT_find.BorderRadius = 29;
+            this.TXT_find.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TXT_find.DefaultText = "";
+            this.TXT_find.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TXT_find.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TXT_find.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_find.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TXT_find.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_find.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TXT_find.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TXT_find.Location = new System.Drawing.Point(469, 13);
+            this.TXT_find.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TXT_find.Name = "TXT_find";
+            this.TXT_find.PasswordChar = '\0';
+            this.TXT_find.PlaceholderText = "";
+            this.TXT_find.SelectedText = "";
+            this.TXT_find.Size = new System.Drawing.Size(1227, 60);
+            this.TXT_find.TabIndex = 5;
+            // 
+            // DGV_SqlData
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.DGV_SqlData.AutoGenerateColumns = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_SqlData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.DGV_SqlData.ColumnHeadersHeight = 4;
+            this.DGV_SqlData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DGV_SqlData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHHDataGridViewTextBoxColumn,
+            this.tenHHDataGridViewTextBoxColumn,
+            this.soLuongDataGridViewTextBoxColumn,
+            this.dVTDataGridViewTextBoxColumn,
+            this.giaBanDataGridViewTextBoxColumn,
+            this.maNCCDataGridViewTextBoxColumn});
+            this.DGV_SqlData.DataSource = this.hangHoaBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_SqlData.DefaultCellStyle = dataGridViewCellStyle6;
+            this.DGV_SqlData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.Location = new System.Drawing.Point(278, 80);
+            this.DGV_SqlData.Name = "DGV_SqlData";
+            this.DGV_SqlData.RowHeadersVisible = false;
+            this.DGV_SqlData.RowHeadersWidth = 51;
+            this.DGV_SqlData.RowTemplate.Height = 24;
+            this.DGV_SqlData.Size = new System.Drawing.Size(1418, 699);
+            this.DGV_SqlData.TabIndex = 7;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DGV_SqlData.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DGV_SqlData.ThemeStyle.HeaderStyle.Height = 4;
+            this.DGV_SqlData.ThemeStyle.ReadOnly = false;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DGV_SqlData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.Height = 24;
+            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGV_SqlData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // BTN_find
+            // 
+            this.BTN_find.AutoRoundedCorners = true;
+            this.BTN_find.BorderRadius = 31;
+            this.BTN_find.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_find.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_find.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_find.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_find.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_find.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_find.ForeColor = System.Drawing.Color.White;
+            this.BTN_find.Image = global::QuanLyBanHang.Properties.Resources.search;
+            this.BTN_find.ImageSize = new System.Drawing.Size(40, 40);
+            this.BTN_find.Location = new System.Drawing.Point(287, 8);
+            this.BTN_find.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_find.Name = "BTN_find";
+            this.BTN_find.Size = new System.Drawing.Size(175, 65);
+            this.BTN_find.TabIndex = 6;
+            this.BTN_find.Text = "TÌM KIẾM";
+            // 
+            // BTN_guide
+            // 
+            this.BTN_guide.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_guide.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_guide.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_guide.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_guide.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BTN_guide.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BTN_guide.ForeColor = System.Drawing.Color.White;
+            this.BTN_guide.Image = global::QuanLyBanHang.Properties.Resources.question;
+            this.BTN_guide.ImageSize = new System.Drawing.Size(30, 30);
+            this.BTN_guide.Location = new System.Drawing.Point(178, 8);
+            this.BTN_guide.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_guide.Name = "BTN_guide";
+            this.BTN_guide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BTN_guide.Size = new System.Drawing.Size(76, 63);
+            this.BTN_guide.TabIndex = 4;
+            // 
             // BTN_minimize
             // 
             this.BTN_minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -345,6 +367,77 @@
             this.BTN_EXIT.TabIndex = 0;
             this.BTN_EXIT.Click += new System.EventHandler(this.BTN_EXIT_Click);
             // 
+            // qLBHDataSet
+            // 
+            this.qLBHDataSet.DataSetName = "QLBHDataSet";
+            this.qLBHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hangHoaBindingSource
+            // 
+            this.hangHoaBindingSource.DataMember = "HangHoa";
+            this.hangHoaBindingSource.DataSource = this.qLBHDataSet;
+            // 
+            // hangHoaTableAdapter
+            // 
+            this.hangHoaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ChucVuTableAdapter = null;
+            this.tableAdapterManager.CTHDTableAdapter = null;
+            this.tableAdapterManager.CuaHangTableAdapter = null;
+            this.tableAdapterManager.HangHoaTableAdapter = this.hangHoaTableAdapter;
+            this.tableAdapterManager.HoaDonTableAdapter = null;
+            this.tableAdapterManager.KhachHangTableAdapter = null;
+            this.tableAdapterManager.KhoHangTableAdapter = null;
+            this.tableAdapterManager.NhaCungCapTableAdapter = null;
+            this.tableAdapterManager.NhanVienTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = QuanLyBanHang.QLBHDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = null;
+            // 
+            // maHHDataGridViewTextBoxColumn
+            // 
+            this.maHHDataGridViewTextBoxColumn.DataPropertyName = "MaHH";
+            this.maHHDataGridViewTextBoxColumn.HeaderText = "MaHH";
+            this.maHHDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maHHDataGridViewTextBoxColumn.Name = "maHHDataGridViewTextBoxColumn";
+            // 
+            // tenHHDataGridViewTextBoxColumn
+            // 
+            this.tenHHDataGridViewTextBoxColumn.DataPropertyName = "TenHH";
+            this.tenHHDataGridViewTextBoxColumn.HeaderText = "TenHH";
+            this.tenHHDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tenHHDataGridViewTextBoxColumn.Name = "tenHHDataGridViewTextBoxColumn";
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            this.soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
+            this.soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            // 
+            // dVTDataGridViewTextBoxColumn
+            // 
+            this.dVTDataGridViewTextBoxColumn.DataPropertyName = "DVT";
+            this.dVTDataGridViewTextBoxColumn.HeaderText = "DVT";
+            this.dVTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dVTDataGridViewTextBoxColumn.Name = "dVTDataGridViewTextBoxColumn";
+            // 
+            // giaBanDataGridViewTextBoxColumn
+            // 
+            this.giaBanDataGridViewTextBoxColumn.DataPropertyName = "GiaBan";
+            this.giaBanDataGridViewTextBoxColumn.HeaderText = "GiaBan";
+            this.giaBanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.giaBanDataGridViewTextBoxColumn.Name = "giaBanDataGridViewTextBoxColumn";
+            // 
+            // maNCCDataGridViewTextBoxColumn
+            // 
+            this.maNCCDataGridViewTextBoxColumn.DataPropertyName = "MaNCC";
+            this.maNCCDataGridViewTextBoxColumn.HeaderText = "MaNCC";
+            this.maNCCDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maNCCDataGridViewTextBoxColumn.Name = "maNCCDataGridViewTextBoxColumn";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -365,8 +458,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
+            this.Resize += new System.EventHandler(this.FormMain_resize);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_SqlData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLBHDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hangHoaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +483,15 @@
         private Guna.UI2.WinForms.Guna2TextBox TXT_find;
         private Guna.UI2.WinForms.Guna2Button BTN_find;
         private Guna.UI2.WinForms.Guna2DataGridView DGV_SqlData;
+        private QLBHDataSet qLBHDataSet;
+        private System.Windows.Forms.BindingSource hangHoaBindingSource;
+        private QLBHDataSetTableAdapters.HangHoaTableAdapter hangHoaTableAdapter;
+        private QLBHDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenHHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dVTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaBanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNCCDataGridViewTextBoxColumn;
     }
 }

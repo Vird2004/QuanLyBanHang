@@ -19,6 +19,8 @@ namespace QuanLyBanHang
 
         private void Main_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLBHDataSet.HangHoa' table. You can move, or remove it, as needed.
+            this.hangHoaTableAdapter.Fill(this.qLBHDataSet.HangHoa);
 
         }
 
@@ -44,6 +46,12 @@ namespace QuanLyBanHang
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormMain_resize(object sender, EventArgs e)
+        {
+            // Ví dụ: Hiển thị kích thước hiện tại của form trong tiêu đề
+            this.Text = $"Kích thước: {this.Width} x {this.Height}";
         }
     }
 }
