@@ -146,7 +146,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(299, 38);
+            this.txtPassword.Size = new System.Drawing.Size(321, 38);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -171,7 +171,7 @@
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(299, 38);
+            this.txtUsername.Size = new System.Drawing.Size(321, 38);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
