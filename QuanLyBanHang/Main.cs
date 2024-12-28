@@ -12,12 +12,16 @@ using QuanLyBanHang.BUS;
 using QuanLyBanHang.DAL.Entities;
 using static Guna.UI2.Native.WinApi;
 using System.IO;
+using Guna.UI2.WinForms;
 
 namespace QuanLyBanHang
 {
     public partial class Main : Form
     {
         private readonly HangHoaService hangHoaService = new HangHoaService();
+
+        public string Avatar { get; private set; }
+
         public Main()
         {
             InitializeComponent();
@@ -31,9 +35,9 @@ namespace QuanLyBanHang
                 BindGrid(listHangHoa);
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối CSDL: " + ex.Message);
+                MessageBox.Show("Lỗi kết nối CSDL: " + ex.Message + "\n" + ex.InnerException?.Message);
             }
         }
 
@@ -49,18 +53,16 @@ namespace QuanLyBanHang
                 DGV_SqlData.Rows[index].Cells[3].Value = item.DVT;
                 DGV_SqlData.Rows[index].Cells[4].Value = item.GiaBan;
                 DGV_SqlData.Rows[index].Cells[5].Value = item.MaKho;
+                DGV_SqlData.Rows[index].Cells[6].Value = item.MaNCC;
 
-                if (item.MaNCC != null) {
-                    DGV_SqlData.Rows[index].Cells[6].Value = item.MaNCC;
-                    
-                    ShowAvatar(item.Avatar);
-                }
-
-
+                // Assuming you want to pass a specific image name for each item
+              //  ShowAvatar(PICBOX_PROFILE, item.Avatar);
             }
         }
 
-        private void ShowAvatar(string ImageName)
+        
+
+        private void ShowAvatar(Guna2PictureBox pICBOX_PROFILE, string ImageName)
         {
             try
             {
@@ -138,6 +140,11 @@ namespace QuanLyBanHang
 DataGridViewCellBorderStyle.SingleHorizontal;
             dgview.BackgroundColor = Color.White;
             dgview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void BTN_ADD_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

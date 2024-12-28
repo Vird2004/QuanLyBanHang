@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.BTN_FixItem);
             this.panel1.Controls.Add(this.BTN_ADD);
             this.panel1.Location = new System.Drawing.Point(16, 84);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(296, 698);
             this.panel1.TabIndex = 2;
@@ -89,7 +89,7 @@
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button1.Location = new System.Drawing.Point(36, 642);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(203, 52);
             this.guna2Button1.TabIndex = 9;
@@ -124,7 +124,7 @@
             this.BTN_ItemList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_ItemList.ImageSize = new System.Drawing.Size(40, 40);
             this.BTN_ItemList.Location = new System.Drawing.Point(23, 378);
-            this.BTN_ItemList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_ItemList.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_ItemList.Name = "BTN_ItemList";
             this.BTN_ItemList.Size = new System.Drawing.Size(235, 65);
             this.BTN_ItemList.TabIndex = 5;
@@ -145,7 +145,7 @@
             this.BTN_DELETE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_DELETE.ImageSize = new System.Drawing.Size(40, 40);
             this.BTN_DELETE.Location = new System.Drawing.Point(23, 231);
-            this.BTN_DELETE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_DELETE.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_DELETE.Name = "BTN_DELETE";
             this.BTN_DELETE.Size = new System.Drawing.Size(235, 65);
             this.BTN_DELETE.TabIndex = 4;
@@ -168,7 +168,7 @@
             this.BTN_Order.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_Order.ImageSize = new System.Drawing.Size(40, 40);
             this.BTN_Order.Location = new System.Drawing.Point(23, 14);
-            this.BTN_Order.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_Order.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Order.Name = "BTN_Order";
             this.BTN_Order.Size = new System.Drawing.Size(235, 64);
             this.BTN_Order.TabIndex = 3;
@@ -189,7 +189,7 @@
             this.BTN_bill.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_bill.ImageSize = new System.Drawing.Size(40, 40);
             this.BTN_bill.Location = new System.Drawing.Point(23, 304);
-            this.BTN_bill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_bill.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_bill.Name = "BTN_bill";
             this.BTN_bill.Size = new System.Drawing.Size(235, 65);
             this.BTN_bill.TabIndex = 2;
@@ -210,7 +210,7 @@
             this.BTN_FixItem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_FixItem.ImageSize = new System.Drawing.Size(40, 40);
             this.BTN_FixItem.Location = new System.Drawing.Point(23, 86);
-            this.BTN_FixItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_FixItem.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_FixItem.Name = "BTN_FixItem";
             this.BTN_FixItem.Size = new System.Drawing.Size(235, 64);
             this.BTN_FixItem.TabIndex = 1;
@@ -232,12 +232,13 @@
             this.BTN_ADD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BTN_ADD.ImageSize = new System.Drawing.Size(40, 40);
             this.BTN_ADD.Location = new System.Drawing.Point(23, 158);
-            this.BTN_ADD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_ADD.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_ADD.Name = "BTN_ADD";
             this.BTN_ADD.Size = new System.Drawing.Size(235, 65);
             this.BTN_ADD.TabIndex = 0;
             this.BTN_ADD.Text = "THÊM MẶT HÀNG";
             this.BTN_ADD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_ADD.Click += new System.EventHandler(this.BTN_ADD_Click);
             // 
             // TXT_find
             // 
@@ -275,7 +276,7 @@
             this.BTN_find.Image = global::QuanLyBanHang.Properties.Resources.search;
             this.BTN_find.ImageSize = new System.Drawing.Size(40, 40);
             this.BTN_find.Location = new System.Drawing.Point(287, 7);
-            this.BTN_find.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_find.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_find.Name = "BTN_find";
             this.BTN_find.Size = new System.Drawing.Size(175, 65);
             this.BTN_find.TabIndex = 6;
@@ -293,7 +294,7 @@
             this.BTN_guide.Image = global::QuanLyBanHang.Properties.Resources.question;
             this.BTN_guide.ImageSize = new System.Drawing.Size(30, 30);
             this.BTN_guide.Location = new System.Drawing.Point(179, 7);
-            this.BTN_guide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_guide.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_guide.Name = "BTN_guide";
             this.BTN_guide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.BTN_guide.Size = new System.Drawing.Size(76, 63);
@@ -311,7 +312,7 @@
             this.BTN_minimize.Image = global::QuanLyBanHang.Properties.Resources.compress;
             this.BTN_minimize.ImageSize = new System.Drawing.Size(30, 30);
             this.BTN_minimize.Location = new System.Drawing.Point(93, 7);
-            this.BTN_minimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_minimize.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_minimize.Name = "BTN_minimize";
             this.BTN_minimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.BTN_minimize.Size = new System.Drawing.Size(76, 63);
@@ -330,7 +331,7 @@
             this.BTN_EXIT.Image = global::QuanLyBanHang.Properties.Resources.XXXXXXXXXXXX1;
             this.BTN_EXIT.ImageSize = new System.Drawing.Size(30, 30);
             this.BTN_EXIT.Location = new System.Drawing.Point(20, 7);
-            this.BTN_EXIT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_EXIT.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_EXIT.Name = "BTN_EXIT";
             this.BTN_EXIT.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.BTN_EXIT.Size = new System.Drawing.Size(76, 63);
@@ -350,7 +351,7 @@
             this.MaKho,
             this.MaNCC});
             this.DGV_SqlData.Location = new System.Drawing.Point(347, 84);
-            this.DGV_SqlData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGV_SqlData.Margin = new System.Windows.Forms.Padding(4);
             this.DGV_SqlData.Name = "DGV_SqlData";
             this.DGV_SqlData.RowHeadersWidth = 51;
             this.DGV_SqlData.Size = new System.Drawing.Size(1193, 655);
@@ -361,42 +362,49 @@
             this.MaHH.HeaderText = "Mã hàng hóa";
             this.MaHH.MinimumWidth = 6;
             this.MaHH.Name = "MaHH";
+            this.MaHH.ReadOnly = true;
             // 
             // TenHH
             // 
             this.TenHH.HeaderText = "Tên hàng hóa";
             this.TenHH.MinimumWidth = 6;
             this.TenHH.Name = "TenHH";
+            this.TenHH.ReadOnly = true;
             // 
             // SoLuong
             // 
             this.SoLuong.HeaderText = "Số lượng tồn";
             this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
             // 
             // DVT
             // 
             this.DVT.HeaderText = "Đơn vị tính";
             this.DVT.MinimumWidth = 6;
             this.DVT.Name = "DVT";
+            this.DVT.ReadOnly = true;
             // 
             // GiaBan
             // 
             this.GiaBan.HeaderText = "Giá bán";
             this.GiaBan.MinimumWidth = 6;
             this.GiaBan.Name = "GiaBan";
+            this.GiaBan.ReadOnly = true;
             // 
             // MaKho
             // 
             this.MaKho.HeaderText = "Mã kho hàng";
             this.MaKho.MinimumWidth = 6;
             this.MaKho.Name = "MaKho";
+            this.MaKho.ReadOnly = true;
             // 
             // MaNCC
             // 
             this.MaNCC.HeaderText = "Mã nhà cung cấp";
             this.MaNCC.MinimumWidth = 6;
             this.MaNCC.Name = "MaNCC";
+            this.MaNCC.ReadOnly = true;
             // 
             // Main
             // 
