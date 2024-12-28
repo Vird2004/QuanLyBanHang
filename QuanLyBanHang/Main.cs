@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using QuanLyBanHang.BUS;
 
 namespace QuanLyBanHang
 {
     public partial class Main : Form
     {
+        private readonly HangHoaService hangHoaService = new HangHoaService();
         public Main()
         {
             InitializeComponent();
@@ -19,7 +22,16 @@ namespace QuanLyBanHang
 
         private void Main_Load(object sender, EventArgs e)
         {
+            try {
+                setGridViewStyle(DGV_SqlData);
+                var listHangHoa = hangHoaService.GetAllHangHoa();
 
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối CSDL: " + ex.Message);
+            }
         }
 
         private void BTN_EXIT_Click(object sender, EventArgs e)
@@ -58,6 +70,16 @@ namespace QuanLyBanHang
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void setGridViewStyle(DataGridView dgview)
+        {
+            dgview.BorderStyle = BorderStyle.None;
+            dgview.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgview.CellBorderStyle =
+DataGridViewCellBorderStyle.SingleHorizontal;
+            dgview.BackgroundColor = Color.White;
+            dgview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
     }
 }
