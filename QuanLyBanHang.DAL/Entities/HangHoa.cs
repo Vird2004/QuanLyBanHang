@@ -43,5 +43,6 @@ namespace QuanLyBanHang.DAL.Entities
         public virtual KhoHang KhoHang { get; set; }
 
         public virtual NhaCungCap NhaCungCap { get; set; }
+        public string Avatar { get; set; }
     }
 }

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QuanLyBanHang.BUS;
+using QuanLyBanHang.DAL.Entities;
+using static Guna.UI2.Native.WinApi;
+using System.IO;
 
 namespace QuanLyBanHang
 {
@@ -25,7 +28,7 @@ namespace QuanLyBanHang
             try {
                 setGridViewStyle(DGV_SqlData);
                 var listHangHoa = hangHoaService.GetAllHangHoa();
-
+                BindGrid(listHangHoa);
 
             }
             catch(Exception ex)
@@ -33,6 +36,62 @@ namespace QuanLyBanHang
                 MessageBox.Show("Lỗi kết nối CSDL: " + ex.Message);
             }
         }
+
+        private void BindGrid(List<HangHoa> listHangHoa)
+        {
+            DGV_SqlData.Rows.Clear();
+            foreach (var item in listHangHoa)
+            {
+                int index = DGV_SqlData.Rows.Add();
+                DGV_SqlData.Rows[index].Cells[0].Value = item.MaHH;
+                DGV_SqlData.Rows[index].Cells[1].Value = item.TenHH;
+                DGV_SqlData.Rows[index].Cells[2].Value = item.SoLuong;
+                DGV_SqlData.Rows[index].Cells[3].Value = item.DVT;
+                DGV_SqlData.Rows[index].Cells[4].Value = item.GiaBan;
+                DGV_SqlData.Rows[index].Cells[5].Value = item.MaKho;
+
+                if (item.MaNCC != null) {
+                    DGV_SqlData.Rows[index].Cells[6].Value = item.MaNCC;
+                    
+                    ShowAvatar(item.Avatar);
+                }
+
+
+            }
+        }
+
+        private void ShowAvatar(string ImageName)
+        {
+            try
+            {
+                string parentDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ImagePath");
+                string imagePath = Path.Combine(parentDirectory, ImageName);
+
+                if (string.IsNullOrEmpty(ImageName) || !File.Exists(imagePath))
+                {
+                    // Nếu ảnh không tồn tại, sử dụng ảnh mặc định
+                    string defaultImage = Path.Combine(parentDirectory, "DefaultAvatar.jpg");
+                    if (File.Exists(defaultImage))
+                    {
+                        PICBOX_PROFILE.Image = Image.FromFile(defaultImage);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ảnh mặc định không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    // Nếu ảnh tồn tại, gán vào PictureBox
+                    PICBOX_PROFILE.Image = Image.FromFile(imagePath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void BTN_EXIT_Click(object sender, EventArgs e)
         {
@@ -42,7 +101,7 @@ namespace QuanLyBanHang
             {
                 this.Close();
                 frmLogin.ShowDialog();
-                
+                Application.Restart();
             }
         }
 
@@ -50,17 +109,16 @@ namespace QuanLyBanHang
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
-                // Thu nhỏ lại
                 this.WindowState = FormWindowState.Normal;
-                BTN_minimize.Text = "Phóng to"; // Cập nhật text của Button
+                BTN_minimize.Text = "🔳"; // Cập nhật biểu tượng
             }
             else
             {
-                // Phóng to
                 this.WindowState = FormWindowState.Maximized;
-                BTN_minimize.Text = "Thu nhỏ"; // Cập nhật text của Button
+                BTN_minimize.Text = "🗗"; // Cập nhật biểu tượng
             }
         }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

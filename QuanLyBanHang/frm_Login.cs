@@ -7,11 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using QuanLyBanHang.BUS;
+using QuanLyBanHang.DAL.Entities;
+using static Guna.UI2.Native.WinApi;
+using System.IO;
+using Umbraco.Core.Runtime;
+
+
 
 namespace QuanLyBanHang
 {
     public partial class frm_Login : Form
     {
+        private BUS.UserService userService = new UserService();
+        public static User CurrentUser;
+
         bool isPasswordVisible = false;
         public frm_Login()
         {
@@ -50,7 +61,8 @@ namespace QuanLyBanHang
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // Kiểm tra thông tin đăng nhập
+            CurrentUser = userService.Login(username, password);
+            /*/ Kiểm tra thông tin đăng nhập
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Vui lòng nhập tên người dùng và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -69,6 +81,18 @@ namespace QuanLyBanHang
             {
                 // Hiển thị thông báo khi thông tin không chính xác
                 MessageBox.Show("Sai mật khẩu hoặc tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } */
+
+            if (CurrentUser != null)
+            {
+                MessageBox.Show("Đăng nhập thành công!");
+                Main mainForm = new Main();
+                this.Hide();
+                mainForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.");
             }
         }
 

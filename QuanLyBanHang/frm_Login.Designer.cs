@@ -32,7 +32,6 @@
             this.LBL_AppName = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.BTN_ViewPass = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_ViewUser = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_LOGIN = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,7 +59,6 @@
             // 
             this.gbLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.gbLogin.Controls.Add(this.BTN_ViewPass);
-            this.gbLogin.Controls.Add(this.BTN_ViewUser);
             this.gbLogin.Controls.Add(this.BTN_LOGIN);
             this.gbLogin.Controls.Add(this.txtPassword);
             this.gbLogin.Controls.Add(this.txtUsername);
@@ -91,22 +89,6 @@
             this.BTN_ViewPass.Size = new System.Drawing.Size(49, 34);
             this.BTN_ViewPass.TabIndex = 14;
             this.BTN_ViewPass.Click += new System.EventHandler(this.BTN_ViewPass_Click);
-            // 
-            // BTN_ViewUser
-            // 
-            this.BTN_ViewUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ViewUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ViewUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_ViewUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_ViewUser.FillColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BTN_ViewUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_ViewUser.ForeColor = System.Drawing.Color.White;
-            this.BTN_ViewUser.Image = global::QuanLyBanHang.Properties.Resources.view;
-            this.BTN_ViewUser.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_ViewUser.Location = new System.Drawing.Point(350, 73);
-            this.BTN_ViewUser.Name = "BTN_ViewUser";
-            this.BTN_ViewUser.Size = new System.Drawing.Size(49, 34);
-            this.BTN_ViewUser.TabIndex = 13;
             // 
             // BTN_LOGIN
             // 
@@ -288,7 +270,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private Guna.UI2.WinForms.Guna2CircleButton BTN_GUIDE;
         private Guna.UI2.WinForms.Guna2PictureBox GPB_BUNNY;
-        private Guna.UI2.WinForms.Guna2Button BTN_ViewUser;
         private Guna.UI2.WinForms.Guna2Button BTN_ViewPass;
     }
 }
