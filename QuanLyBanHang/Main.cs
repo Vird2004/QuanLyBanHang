@@ -144,6 +144,21 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void BTN_ADD_Click(object sender, EventArgs e)
         {
+            HangHoa h = new HangHoa()
+            { 
+                
+            
+            };
+
+        }
+
+        private void BTN_find_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Order_Click(object sender, EventArgs e)
+        {
 
         }
     }
