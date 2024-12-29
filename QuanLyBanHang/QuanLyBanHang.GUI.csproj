@@ -297,7 +297,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ImagePath\DefaultAvatar.jpg" />
+    <None Include="Resources\fish.jpg" />
+    <None Include="Resources\2 pose in 11.jpg" />
     <Content Include="Resources\DefaultAvatar.png" />
+    <None Include="Resources\maid catttttttt.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

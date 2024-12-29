@@ -60,39 +60,6 @@ namespace QuanLyBanHang
             }
         }
 
-        
-
-        private void ShowAvatar(Guna2PictureBox pICBOX_PROFILE, string ImageName)
-        {
-            try
-            {
-                string parentDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ImagePath");
-                string imagePath = Path.Combine(parentDirectory, ImageName);
-
-                if (string.IsNullOrEmpty(ImageName) || !File.Exists(imagePath))
-                {
-                    // Nếu ảnh không tồn tại, sử dụng ảnh mặc định
-                    string defaultImage = Path.Combine(parentDirectory, "DefaultAvatar.jpg");
-                    if (File.Exists(defaultImage))
-                    {
-                        PICBOX_PROFILE.Image = Image.FromFile(defaultImage);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ảnh mặc định không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    // Nếu ảnh tồn tại, gán vào PictureBox
-                    PICBOX_PROFILE.Image = Image.FromFile(imagePath);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi tải ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
 
         private void BTN_EXIT_Click(object sender, EventArgs e)
@@ -112,12 +79,12 @@ namespace QuanLyBanHang
             if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-                BTN_minimize.Text = "🔳"; // Cập nhật biểu tượng
+            
             }
             else
             {
                 this.WindowState = FormWindowState.Maximized;
-                BTN_minimize.Text = "🗗"; // Cập nhật biểu tượng
+           
             }
         }
 
@@ -158,6 +125,11 @@ DataGridViewCellBorderStyle.SingleHorizontal;
         }
 
         private void BTN_Order_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
