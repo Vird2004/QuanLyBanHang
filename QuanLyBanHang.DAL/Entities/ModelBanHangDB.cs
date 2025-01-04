@@ -8,7 +8,7 @@ namespace QuanLyBanHang.DAL.Entities
     public partial class ModelBanHangDB : DbContext
     {
         public ModelBanHangDB()
-            : base("name=ModelBanHangDB")
+            : base(ConnectionStringHelper.GetConnectionString())
         {
         }
 

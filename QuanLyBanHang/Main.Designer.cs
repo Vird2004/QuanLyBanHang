@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTN_ItemList = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_DELETE = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_Order = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_bill = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_ADD = new Guna.UI2.WinForms.Guna2Button();
             this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGV_SqlData = new System.Windows.Forms.DataGridView();
             this.MaHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,11 +45,6 @@
             this.MaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_find = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_guide = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.BTN_ItemList = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_DELETE = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_Order = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_bill = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_ADD = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_minimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.BTN_EXIT = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -68,6 +68,109 @@
             this.panel1.Size = new System.Drawing.Size(295, 465);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // BTN_ItemList
+            // 
+            this.BTN_ItemList.AutoRoundedCorners = true;
+            this.BTN_ItemList.BorderRadius = 31;
+            this.BTN_ItemList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ItemList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ItemList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ItemList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ItemList.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_ItemList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ItemList.ForeColor = System.Drawing.Color.White;
+            this.BTN_ItemList.Image = global::QuanLyBanHang.Properties.Resources.list_check;
+            this.BTN_ItemList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_ItemList.Location = new System.Drawing.Point(11, 305);
+            this.BTN_ItemList.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_ItemList.Name = "BTN_ItemList";
+            this.BTN_ItemList.Size = new System.Drawing.Size(268, 65);
+            this.BTN_ItemList.TabIndex = 5;
+            this.BTN_ItemList.Text = "THỐNG KÊ";
+            // 
+            // BTN_DELETE
+            // 
+            this.BTN_DELETE.AutoRoundedCorners = true;
+            this.BTN_DELETE.BorderRadius = 31;
+            this.BTN_DELETE.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_DELETE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_DELETE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_DELETE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_DELETE.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_DELETE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_DELETE.ForeColor = System.Drawing.Color.White;
+            this.BTN_DELETE.Image = global::QuanLyBanHang.Properties.Resources.basket_shopping_minus;
+            this.BTN_DELETE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_DELETE.Location = new System.Drawing.Point(11, 159);
+            this.BTN_DELETE.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_DELETE.Name = "BTN_DELETE";
+            this.BTN_DELETE.Size = new System.Drawing.Size(268, 65);
+            this.BTN_DELETE.TabIndex = 4;
+            this.BTN_DELETE.Text = "Quản Lý Đơn Đặt Hàng";
+            this.BTN_DELETE.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // BTN_Order
+            // 
+            this.BTN_Order.AutoRoundedCorners = true;
+            this.BTN_Order.BorderRadius = 31;
+            this.BTN_Order.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Order.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_Order.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_Order.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_Order.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_Order.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BTN_Order.ForeColor = System.Drawing.Color.White;
+            this.BTN_Order.Image = global::QuanLyBanHang.Properties.Resources.box_circle_check;
+            this.BTN_Order.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_Order.Location = new System.Drawing.Point(11, 14);
+            this.BTN_Order.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_Order.Name = "BTN_Order";
+            this.BTN_Order.Size = new System.Drawing.Size(268, 64);
+            this.BTN_Order.TabIndex = 3;
+            this.BTN_Order.Text = "ĐẶT HÀNG";
+            this.BTN_Order.Click += new System.EventHandler(this.BTN_Order_Click);
+            // 
+            // BTN_bill
+            // 
+            this.BTN_bill.AutoRoundedCorners = true;
+            this.BTN_bill.BorderRadius = 31;
+            this.BTN_bill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_bill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_bill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_bill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_bill.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_bill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_bill.ForeColor = System.Drawing.Color.White;
+            this.BTN_bill.Image = global::QuanLyBanHang.Properties.Resources.receipt;
+            this.BTN_bill.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_bill.Location = new System.Drawing.Point(11, 232);
+            this.BTN_bill.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_bill.Name = "BTN_bill";
+            this.BTN_bill.Size = new System.Drawing.Size(268, 65);
+            this.BTN_bill.TabIndex = 2;
+            this.BTN_bill.Text = "IN HÓA ĐƠN";
+            // 
+            // BTN_ADD
+            // 
+            this.BTN_ADD.AutoRoundedCorners = true;
+            this.BTN_ADD.BorderRadius = 31;
+            this.BTN_ADD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ADD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ADD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ADD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ADD.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_ADD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_ADD.ForeColor = System.Drawing.Color.White;
+            this.BTN_ADD.Image = global::QuanLyBanHang.Properties.Resources.cart_arrow_down;
+            this.BTN_ADD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_ADD.Location = new System.Drawing.Point(11, 86);
+            this.BTN_ADD.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_ADD.Name = "BTN_ADD";
+            this.BTN_ADD.Size = new System.Drawing.Size(268, 65);
+            this.BTN_ADD.TabIndex = 0;
+            this.BTN_ADD.Text = "QUẢN LÝ MẶT HÀNG";
+            this.BTN_ADD.Click += new System.EventHandler(this.BTN_ADD_Click);
             // 
             // TXT_find
             // 
@@ -199,109 +302,7 @@
             this.BTN_guide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.BTN_guide.Size = new System.Drawing.Size(76, 63);
             this.BTN_guide.TabIndex = 4;
-            // 
-            // BTN_ItemList
-            // 
-            this.BTN_ItemList.AutoRoundedCorners = true;
-            this.BTN_ItemList.BorderRadius = 31;
-            this.BTN_ItemList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ItemList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ItemList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_ItemList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_ItemList.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_ItemList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_ItemList.ForeColor = System.Drawing.Color.White;
-            this.BTN_ItemList.Image = global::QuanLyBanHang.Properties.Resources.list_check;
-            this.BTN_ItemList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_ItemList.Location = new System.Drawing.Point(11, 305);
-            this.BTN_ItemList.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_ItemList.Name = "BTN_ItemList";
-            this.BTN_ItemList.Size = new System.Drawing.Size(268, 65);
-            this.BTN_ItemList.TabIndex = 5;
-            this.BTN_ItemList.Text = "THỐNG KÊ";
-            // 
-            // BTN_DELETE
-            // 
-            this.BTN_DELETE.AutoRoundedCorners = true;
-            this.BTN_DELETE.BorderRadius = 31;
-            this.BTN_DELETE.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_DELETE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_DELETE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_DELETE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_DELETE.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_DELETE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_DELETE.ForeColor = System.Drawing.Color.White;
-            this.BTN_DELETE.Image = global::QuanLyBanHang.Properties.Resources.basket_shopping_minus;
-            this.BTN_DELETE.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_DELETE.Location = new System.Drawing.Point(11, 159);
-            this.BTN_DELETE.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_DELETE.Name = "BTN_DELETE";
-            this.BTN_DELETE.Size = new System.Drawing.Size(268, 65);
-            this.BTN_DELETE.TabIndex = 4;
-            this.BTN_DELETE.Text = "Quản Lý Đơn Đặt Hàng";
-            this.BTN_DELETE.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // BTN_Order
-            // 
-            this.BTN_Order.AutoRoundedCorners = true;
-            this.BTN_Order.BorderRadius = 31;
-            this.BTN_Order.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_Order.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_Order.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_Order.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_Order.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_Order.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BTN_Order.ForeColor = System.Drawing.Color.White;
-            this.BTN_Order.Image = global::QuanLyBanHang.Properties.Resources.box_circle_check;
-            this.BTN_Order.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_Order.Location = new System.Drawing.Point(11, 14);
-            this.BTN_Order.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_Order.Name = "BTN_Order";
-            this.BTN_Order.Size = new System.Drawing.Size(268, 64);
-            this.BTN_Order.TabIndex = 3;
-            this.BTN_Order.Text = "ĐẶT HÀNG";
-            this.BTN_Order.Click += new System.EventHandler(this.BTN_Order_Click);
-            // 
-            // BTN_bill
-            // 
-            this.BTN_bill.AutoRoundedCorners = true;
-            this.BTN_bill.BorderRadius = 31;
-            this.BTN_bill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_bill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_bill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_bill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_bill.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_bill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_bill.ForeColor = System.Drawing.Color.White;
-            this.BTN_bill.Image = global::QuanLyBanHang.Properties.Resources.receipt;
-            this.BTN_bill.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_bill.Location = new System.Drawing.Point(11, 232);
-            this.BTN_bill.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_bill.Name = "BTN_bill";
-            this.BTN_bill.Size = new System.Drawing.Size(268, 65);
-            this.BTN_bill.TabIndex = 2;
-            this.BTN_bill.Text = "IN HÓA ĐƠN";
-            // 
-            // BTN_ADD
-            // 
-            this.BTN_ADD.AutoRoundedCorners = true;
-            this.BTN_ADD.BorderRadius = 31;
-            this.BTN_ADD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ADD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_ADD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_ADD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_ADD.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_ADD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_ADD.ForeColor = System.Drawing.Color.White;
-            this.BTN_ADD.Image = global::QuanLyBanHang.Properties.Resources.cart_arrow_down;
-            this.BTN_ADD.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_ADD.Location = new System.Drawing.Point(11, 86);
-            this.BTN_ADD.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_ADD.Name = "BTN_ADD";
-            this.BTN_ADD.Size = new System.Drawing.Size(268, 65);
-            this.BTN_ADD.TabIndex = 0;
-            this.BTN_ADD.Text = "QUẢN LÝ MẶT HÀNG";
-            this.BTN_ADD.Click += new System.EventHandler(this.BTN_ADD_Click);
+            this.BTN_guide.Click += new System.EventHandler(this.BTN_guide_Click);
             // 
             // BTN_minimize
             // 

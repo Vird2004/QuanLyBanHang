@@ -13,6 +13,7 @@ using QuanLyBanHang.DAL.Entities;
 using static Guna.UI2.Native.WinApi;
 using System.IO;
 using Umbraco.Core.Runtime;
+using System.Diagnostics;
 
 
 
@@ -98,7 +99,8 @@ namespace QuanLyBanHang
 
         private void BTN_GUIDE_Click(object sender, EventArgs e)
         {
-
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HDSD.html");
+            OpenFile(filePath);
         }
 
         private void BTN_ViewPass_Click(object sender, EventArgs e)
@@ -113,6 +115,22 @@ namespace QuanLyBanHang
                 txtPassword.PasswordChar = '\0';
             }
             isPasswordVisible = !isPasswordVisible; // Đảo trạng thái
+        }
+
+        private void OpenFile(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = filePath,
+                    UseShellExecute = true // Mở bằng ứng dụng mặc định
+                });
+            }
+            else
+            {
+                MessageBox.Show($"Không tìm thấy file: {filePath}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

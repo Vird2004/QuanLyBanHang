@@ -13,6 +13,7 @@ using QuanLyBanHang.DAL.Entities;
 using static Guna.UI2.Native.WinApi;
 using System.IO;
 using Guna.UI2.WinForms;
+using System.Diagnostics;
 
 namespace QuanLyBanHang
 {
@@ -132,6 +133,28 @@ DataGridViewCellBorderStyle.SingleHorizontal;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTN_guide_Click(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HDSD_1.html");
+            OpenFile(filePath);
+        }
+
+        private void OpenFile(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = filePath,
+                    UseShellExecute = true // Mở bằng ứng dụng mặc định
+                });
+            }
+            else
+            {
+                MessageBox.Show($"Không tìm thấy file: {filePath}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
