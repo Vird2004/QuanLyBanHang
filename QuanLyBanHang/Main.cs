@@ -14,6 +14,7 @@ using static Guna.UI2.Native.WinApi;
 using System.IO;
 using Guna.UI2.WinForms;
 using System.Diagnostics;
+using StackExchange.Profiling.Internal;
 
 namespace QuanLyBanHang
 {
@@ -112,17 +113,46 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void BTN_ADD_Click(object sender, EventArgs e)
         {
-            HangHoa h = new HangHoa()
-            { 
-                
-            
-            };
+            QLyHang qLyHang = new QLyHang();
+            this.Close();
+            qLyHang.ShowDialog();
 
         }
 
         private void BTN_find_Click(object sender, EventArgs e)
         {
+            string keyword = TXT_find.Text.Trim(); // Lấy từ khóa tìm kiếm từ TextBox
 
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa để tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // Tìm kiếm bằng LINQ trong danh sách hàng hóa
+                var listHangHoa = hangHoaService.GetAllHangHoa(); // Lấy tất cả dữ liệu từ CSDL
+                var filteredList = listHangHoa.Where(hh =>
+                    hh.MaHH.ToString().Contains(keyword) || // Tìm theo ID (MaHH)
+                    hh.TenHH.Contains(keyword, StringComparison.OrdinalIgnoreCase) // Tìm theo tên (TenHH)
+                ).ToList();
+
+                // Bind lại dữ liệu vào DataGridView
+                if (filteredList.Count > 0)
+                {
+                    BindGrid(filteredList); // Cập nhật DataGridView với dữ liệu lọc
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy kết quả phù hợp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DGV_SqlData.Rows.Clear(); // Xóa dữ liệu nếu không có kết quả
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BTN_Order_Click(object sender, EventArgs e)
@@ -155,6 +185,11 @@ DataGridViewCellBorderStyle.SingleHorizontal;
             {
                 MessageBox.Show($"Không tìm thấy file: {filePath}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DGV_SqlData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

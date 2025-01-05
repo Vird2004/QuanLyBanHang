@@ -214,6 +214,7 @@
             this.DGV_SqlData.RowHeadersWidth = 51;
             this.DGV_SqlData.Size = new System.Drawing.Size(1193, 655);
             this.DGV_SqlData.TabIndex = 7;
+            this.DGV_SqlData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_SqlData_CellContentClick);
             // 
             // MaHH
             // 

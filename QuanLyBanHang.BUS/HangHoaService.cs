@@ -1,6 +1,7 @@
 ﻿using QuanLyBanHang.DAL.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,16 @@ namespace QuanLyBanHang.BUS
         //Khởi tạo đối tượng kết nối CSDL
         ModelBanHangDB modelBanHang = new ModelBanHangDB();
 
-        //Phuong thuc lay tat ca hang hoa
+        //Phuong thuc lay tat ca hang hoa 
         public List<HangHoa> GetAllHangHoa()
         {
             return modelBanHang.HangHoas.ToList();
         }
 
+        public List<HangHoa> GetAllHangHoa(Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1)
+        {
+            return modelBanHang.HangHoas.ToList();
+        }
         //Lay hang theo id
         public HangHoa GetHangHoaByID(string maHH)
         {
@@ -33,7 +38,7 @@ namespace QuanLyBanHang.BUS
 
         public void InsertUpdate(HangHoa h) {
             ModelBanHangDB context = new ModelBanHangDB();
-            context.HangHoas.Add(h);
+            context.HangHoas.AddOrUpdate(h);
             context.SaveChanges();
         }
 
