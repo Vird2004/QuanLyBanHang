@@ -175,5 +175,10 @@ DataGridViewCellBorderStyle.SingleHorizontal;
                 guna2TextBox7.Text = row.Cells[6].Value?.ToString();
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
