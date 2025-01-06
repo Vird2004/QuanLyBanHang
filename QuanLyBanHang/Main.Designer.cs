@@ -32,7 +32,7 @@
             this.BTN_ItemList = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_DELETE = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Order = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_bill = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_QuanlyKH = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_ADD = new Guna.UI2.WinForms.Guna2Button();
             this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGV_SqlData = new System.Windows.Forms.DataGridView();
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.BTN_ItemList);
             this.panel1.Controls.Add(this.BTN_DELETE);
             this.panel1.Controls.Add(this.BTN_Order);
-            this.panel1.Controls.Add(this.BTN_bill);
+            this.panel1.Controls.Add(this.BTN_QuanlyKH);
             this.panel1.Controls.Add(this.BTN_ADD);
             this.panel1.Location = new System.Drawing.Point(30, 274);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -131,7 +131,7 @@
             this.BTN_Order.Text = "ĐẶT HÀNG";
             this.BTN_Order.Click += new System.EventHandler(this.BTN_Order_Click);
             // 
-            // BTN_bill
+            // BTN_QuanlyKH
             // 
             this.BTN_bill.AutoRoundedCorners = true;
             this.BTN_bill.BorderRadius = 31;
@@ -390,7 +390,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton BTN_minimize;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button BTN_ADD;
-        private Guna.UI2.WinForms.Guna2Button BTN_bill;
+        private Guna.UI2.WinForms.Guna2Button BTN_QuanlyKH;
         private Guna.UI2.WinForms.Guna2Button BTN_Order;
         private Guna.UI2.WinForms.Guna2Button BTN_DELETE;
         private Guna.UI2.WinForms.Guna2Button BTN_ItemList;

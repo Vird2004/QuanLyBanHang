@@ -117,7 +117,7 @@ namespace QuanLyBanHang
         {
             try
             {
-                setGridViewStyle(guna2DataGridView1);
+                setGridViewStyle(DGV_QlH);
                 var listHangHoa = hangHoaService.GetAllHangHoa();
                 BindGrid(listHangHoa);
 
@@ -130,17 +130,17 @@ namespace QuanLyBanHang
 
         private void BindGrid(List<HangHoa> listHangHoa)
         {
-            guna2DataGridView1.Rows.Clear();
+            DGV_QlH.Rows.Clear();
             foreach (var item in listHangHoa)
             {
-                int index = guna2DataGridView1.Rows.Add();
-                guna2DataGridView1.Rows[index].Cells[0].Value = item.MaHH;
-                guna2DataGridView1.Rows[index].Cells[1].Value = item.TenHH;
-                guna2DataGridView1.Rows[index].Cells[2].Value = item.SoLuong;
-                guna2DataGridView1.Rows[index].Cells[3].Value = item.DVT;
-                guna2DataGridView1.Rows[index].Cells[4].Value = item.GiaBan;
-                guna2DataGridView1.Rows[index].Cells[5].Value = item.MaKho;
-                guna2DataGridView1.Rows[index].Cells[6].Value = item.MaNCC;
+                int index = DGV_QlH.Rows.Add();
+                DGV_QlH.Rows[index].Cells[0].Value = item.MaHH;
+                DGV_QlH.Rows[index].Cells[1].Value = item.TenHH;
+                DGV_QlH.Rows[index].Cells[2].Value = item.SoLuong;
+                DGV_QlH.Rows[index].Cells[3].Value = item.DVT;
+                DGV_QlH.Rows[index].Cells[4].Value = item.GiaBan;
+                DGV_QlH.Rows[index].Cells[5].Value = item.MaKho;
+                DGV_QlH.Rows[index].Cells[6].Value = item.MaNCC;
 
                 // Assuming you want to pass a specific image name for each item
                 //  ShowAvatar(PICBOX_PROFILE, item.Avatar);
@@ -163,7 +163,7 @@ DataGridViewCellBorderStyle.SingleHorizontal;
             if (e.RowIndex >= 0)
             {
                 // Lấy dòng hiện tại
-                DataGridViewRow row = guna2DataGridView1.Rows[e.RowIndex];
+                DataGridViewRow row = DGV_QlH.Rows[e.RowIndex];
 
                 // Gán giá trị từ dòng được chọn vào các TextBox
                 TXT_MMH.Text = row.Cells[0].Value?.ToString();
@@ -177,6 +177,11 @@ DataGridViewCellBorderStyle.SingleHorizontal;
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

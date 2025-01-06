@@ -21,5 +21,10 @@ namespace QuanLyBanHang
         {
 
         }
+
+        private void DTG_DatHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
