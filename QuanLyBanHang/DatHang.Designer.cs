@@ -45,18 +45,6 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
-            // 
-            
-            // 
-            // guna2TextBox1
-            // 
-            
-            // 
-            // guna2CircleButton1
-            // 
-            
-            // 
             // BTN_EXIT
             // 
             this.BTN_EXIT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -71,7 +59,7 @@
             this.BTN_EXIT.Location = new System.Drawing.Point(21, 9);
             this.BTN_EXIT.Name = "BTN_EXIT";
             this.BTN_EXIT.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_EXIT.Size = new System.Drawing.Size(57, 51);
+            this.BTN_EXIT.Size = new System.Drawing.Size(76, 63);
             this.BTN_EXIT.TabIndex = 3;
             // 
             // BTN_minimize
