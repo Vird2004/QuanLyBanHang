@@ -118,7 +118,7 @@ DataGridViewCellBorderStyle.SingleHorizontal;
             qLyHang.ShowDialog();
 
         }
-
+        //
         private void BTN_find_Click(object sender, EventArgs e)
         {
             string keyword = TXT_find.Text.Trim(); // Lấy từ khóa tìm kiếm từ TextBox
