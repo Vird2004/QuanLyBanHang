@@ -47,15 +47,56 @@
             // 
             // dataGridView1
             // 
-            
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumPurple;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(10, 66);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1048, 464);
+            this.dataGridView1.TabIndex = 0;
             // 
             // guna2TextBox1
             // 
-            
+            this.guna2TextBox1.AutoRoundedCorners = true;
+            this.guna2TextBox1.BorderRadius = 18;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(284, 12);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(772, 39);
+            this.guna2TextBox1.TabIndex = 1;
             // 
             // guna2CircleButton1
             // 
-            
+            this.guna2CircleButton1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = global::QuanLyBanHang.Properties.Resources.search;
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(241, 11);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(40, 41);
+            this.guna2CircleButton1.TabIndex = 2;
             // 
             // BTN_EXIT
             // 
@@ -76,7 +117,20 @@
             // 
             // BTN_minimize
             // 
-            
+            this.BTN_minimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_minimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_minimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_minimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_minimize.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BTN_minimize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BTN_minimize.ForeColor = System.Drawing.Color.White;
+            this.BTN_minimize.Image = global::QuanLyBanHang.Properties.Resources.compress;
+            this.BTN_minimize.ImageSize = new System.Drawing.Size(30, 30);
+            this.BTN_minimize.Location = new System.Drawing.Point(84, 9);
+            this.BTN_minimize.Name = "BTN_minimize";
+            this.BTN_minimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BTN_minimize.Size = new System.Drawing.Size(57, 51);
+            this.BTN_minimize.TabIndex = 4;
             // 
             // BTN_guide
             // 
@@ -197,7 +251,22 @@
             this.TXT_TongGia.Size = new System.Drawing.Size(655, 60);
             this.TXT_TongGia.TabIndex = 6;
             // 
-            
+            this.BTN_ThongKe.AutoRoundedCorners = true;
+            this.BTN_ThongKe.BorderRadius = 31;
+            this.BTN_ThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_ThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_ThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_ThongKe.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_ThongKe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BTN_ThongKe.ForeColor = System.Drawing.Color.White;
+            this.BTN_ThongKe.Image = global::QuanLyBanHang.Properties.Resources.box_circle_check;
+            this.BTN_ThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_ThongKe.Location = new System.Drawing.Point(3, 14);
+            this.BTN_ThongKe.Name = "BTN_ThongKe";
+            this.BTN_ThongKe.Size = new System.Drawing.Size(240, 65);
+            this.BTN_ThongKe.TabIndex = 3;
+            this.BTN_ThongKe.Text = "THỐNG KÊ";
             // 
             this.TXT_SoLuong.AutoRoundedCorners = true;
             this.TXT_SoLuong.BorderRadius = 29;
