@@ -245,7 +245,7 @@
             this.BTN_Dat_Hang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Dat_Hang.ForeColor = System.Drawing.Color.White;
             this.BTN_Dat_Hang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_Dat_Hang.Location = new System.Drawing.Point(124, 515);
+            this.BTN_Dat_Hang.Location = new System.Drawing.Point(147, 515);
             this.BTN_Dat_Hang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_Dat_Hang.Name = "BTN_Dat_Hang";
             this.BTN_Dat_Hang.Size = new System.Drawing.Size(222, 80);
