@@ -41,10 +41,8 @@
             this.TXT_TenKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.BTN_QuanLyDonDH = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_InHoaDon = new Guna.UI2.WinForms.Guna2Button();
-            this.DTG_DatHang = new System.Windows.Forms.DataGridView();
             this.BTN_CTHD = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DTG_DatHang)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -350,18 +348,6 @@
             this.BTN_InHoaDon.TabIndex = 3;
             this.BTN_InHoaDon.Text = "In Hóa Đơn";
             // 
-            // DTG_DatHang
-            // 
-            this.DTG_DatHang.BackgroundColor = System.Drawing.Color.MediumPurple;
-            this.DTG_DatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DTG_DatHang.Location = new System.Drawing.Point(12, 375);
-            this.DTG_DatHang.Name = "DTG_DatHang";
-            this.DTG_DatHang.RowHeadersWidth = 51;
-            this.DTG_DatHang.RowTemplate.Height = 24;
-            this.DTG_DatHang.Size = new System.Drawing.Size(1188, 465);
-            this.DTG_DatHang.TabIndex = 7;
-            this.DTG_DatHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTG_DatHang_CellContentClick);
-            // 
             // BTN_CTHD
             // 
             this.BTN_CTHD.AutoRoundedCorners = true;
@@ -399,7 +385,6 @@
             this.Load += new System.EventHandler(this.DatHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DTG_DatHang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +404,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView DTG_DatHang;
         private Guna.UI2.WinForms.Guna2Button BTN_CTHD;
     }
 }
