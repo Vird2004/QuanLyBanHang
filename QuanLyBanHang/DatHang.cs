@@ -26,5 +26,10 @@ namespace QuanLyBanHang
         {
 
         }
+
+        private void BTN_EXIT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
