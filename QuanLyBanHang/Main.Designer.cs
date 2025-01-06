@@ -150,6 +150,7 @@
             this.BTN_bill.Size = new System.Drawing.Size(268, 65);
             this.BTN_bill.TabIndex = 2;
             this.BTN_bill.Text = "IN HÓA ĐƠN";
+            this.BTN_bill.Click += new System.EventHandler(this.BTN_bill_Click);
             // 
             // BTN_ADD
             // 

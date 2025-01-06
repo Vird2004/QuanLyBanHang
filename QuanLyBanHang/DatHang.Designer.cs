@@ -45,17 +45,18 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumPurple;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 81);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 66);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1397, 571);
+            this.dataGridView1.Size = new System.Drawing.Size(1048, 464);
             this.dataGridView1.TabIndex = 0;
             // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderRadius = 23;
+            this.guna2TextBox1.BorderRadius = 18;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -65,13 +66,13 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(379, 15);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Location = new System.Drawing.Point(284, 12);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(1030, 48);
+            this.guna2TextBox1.Size = new System.Drawing.Size(772, 39);
             this.guna2TextBox1.TabIndex = 1;
             // 
             // guna2CircleButton1
@@ -86,10 +87,11 @@
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.Image = global::QuanLyBanHang.Properties.Resources.search;
             this.guna2CircleButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(321, 13);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(241, 11);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(53, 50);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(40, 41);
             this.guna2CircleButton1.TabIndex = 2;
             // 
             // BTN_EXIT
@@ -103,11 +105,10 @@
             this.BTN_EXIT.ForeColor = System.Drawing.Color.White;
             this.BTN_EXIT.Image = global::QuanLyBanHang.Properties.Resources.XXXXXXXXXXXX1;
             this.BTN_EXIT.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_EXIT.Location = new System.Drawing.Point(28, 11);
-            this.BTN_EXIT.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_EXIT.Location = new System.Drawing.Point(21, 9);
             this.BTN_EXIT.Name = "BTN_EXIT";
             this.BTN_EXIT.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_EXIT.Size = new System.Drawing.Size(76, 63);
+            this.BTN_EXIT.Size = new System.Drawing.Size(57, 51);
             this.BTN_EXIT.TabIndex = 3;
             // 
             // BTN_minimize
@@ -121,11 +122,10 @@
             this.BTN_minimize.ForeColor = System.Drawing.Color.White;
             this.BTN_minimize.Image = global::QuanLyBanHang.Properties.Resources.compress;
             this.BTN_minimize.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_minimize.Location = new System.Drawing.Point(112, 11);
-            this.BTN_minimize.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_minimize.Location = new System.Drawing.Point(84, 9);
             this.BTN_minimize.Name = "BTN_minimize";
             this.BTN_minimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_minimize.Size = new System.Drawing.Size(76, 63);
+            this.BTN_minimize.Size = new System.Drawing.Size(57, 51);
             this.BTN_minimize.TabIndex = 4;
             // 
             // BTN_guide
@@ -139,11 +139,10 @@
             this.BTN_guide.ForeColor = System.Drawing.Color.White;
             this.BTN_guide.Image = global::QuanLyBanHang.Properties.Resources.question;
             this.BTN_guide.ImageSize = new System.Drawing.Size(30, 30);
-            this.BTN_guide.Location = new System.Drawing.Point(209, 11);
-            this.BTN_guide.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_guide.Location = new System.Drawing.Point(157, 9);
             this.BTN_guide.Name = "BTN_guide";
             this.BTN_guide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_guide.Size = new System.Drawing.Size(76, 63);
+            this.BTN_guide.Size = new System.Drawing.Size(57, 51);
             this.BTN_guide.TabIndex = 5;
             // 
             // panel1
@@ -152,16 +151,15 @@
             this.panel1.BackColor = System.Drawing.Color.MediumPurple;
             this.panel1.Controls.Add(this.BTN_ThongKe);
             this.panel1.Controls.Add(this.BTN_QuanLyDonDH);
-            this.panel1.Location = new System.Drawing.Point(13, 660);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(10, 536);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1396, 114);
+            this.panel1.Size = new System.Drawing.Size(1047, 93);
             this.panel1.TabIndex = 6;
             // 
             // BTN_ThongKe
             // 
             this.BTN_ThongKe.AutoRoundedCorners = true;
-            this.BTN_ThongKe.BorderRadius = 39;
+            this.BTN_ThongKe.BorderRadius = 31;
             this.BTN_ThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.BTN_ThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BTN_ThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -171,17 +169,16 @@
             this.BTN_ThongKe.ForeColor = System.Drawing.Color.White;
             this.BTN_ThongKe.Image = global::QuanLyBanHang.Properties.Resources.box_circle_check;
             this.BTN_ThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_ThongKe.Location = new System.Drawing.Point(4, 17);
-            this.BTN_ThongKe.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_ThongKe.Location = new System.Drawing.Point(3, 14);
             this.BTN_ThongKe.Name = "BTN_ThongKe";
-            this.BTN_ThongKe.Size = new System.Drawing.Size(320, 80);
+            this.BTN_ThongKe.Size = new System.Drawing.Size(240, 65);
             this.BTN_ThongKe.TabIndex = 3;
             this.BTN_ThongKe.Text = "THỐNG KÊ";
             // 
             // BTN_QuanLyDonDH
             // 
             this.BTN_QuanLyDonDH.AutoRoundedCorners = true;
-            this.BTN_QuanLyDonDH.BorderRadius = 39;
+            this.BTN_QuanLyDonDH.BorderRadius = 31;
             this.BTN_QuanLyDonDH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.BTN_QuanLyDonDH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.BTN_QuanLyDonDH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -191,20 +188,19 @@
             this.BTN_QuanLyDonDH.ForeColor = System.Drawing.Color.White;
             this.BTN_QuanLyDonDH.Image = global::QuanLyBanHang.Properties.Resources.cart_arrow_down;
             this.BTN_QuanLyDonDH.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_QuanLyDonDH.Location = new System.Drawing.Point(355, 17);
-            this.BTN_QuanLyDonDH.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_QuanLyDonDH.Location = new System.Drawing.Point(266, 14);
             this.BTN_QuanLyDonDH.Name = "BTN_QuanLyDonDH";
-            this.BTN_QuanLyDonDH.Size = new System.Drawing.Size(320, 80);
+            this.BTN_QuanLyDonDH.Size = new System.Drawing.Size(240, 65);
             this.BTN_QuanLyDonDH.TabIndex = 0;
             this.BTN_QuanLyDonDH.Text = "QUẢN LÝ ĐƠN DẶT HÀNG";
             // 
             // DatHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1422, 784);
+            this.ClientSize = new System.Drawing.Size(1066, 637);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BTN_guide);
             this.Controls.Add(this.BTN_minimize);
@@ -213,6 +209,7 @@
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DatHang";
             this.Text = "DatHang";
             this.Load += new System.EventHandler(this.DatHang_Load);
