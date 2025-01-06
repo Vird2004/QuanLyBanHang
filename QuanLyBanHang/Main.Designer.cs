@@ -32,7 +32,7 @@
             this.BTN_ItemList = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_DELETE = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_Order = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_bill = new Guna.UI2.WinForms.Guna2Button();
+            this.BTN_QuanlyKH = new Guna.UI2.WinForms.Guna2Button();
             this.BTN_ADD = new Guna.UI2.WinForms.Guna2Button();
             this.TXT_find = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGV_SqlData = new System.Windows.Forms.DataGridView();
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.BTN_ItemList);
             this.panel1.Controls.Add(this.BTN_DELETE);
             this.panel1.Controls.Add(this.BTN_Order);
-            this.panel1.Controls.Add(this.BTN_bill);
+            this.panel1.Controls.Add(this.BTN_QuanlyKH);
             this.panel1.Controls.Add(this.BTN_ADD);
             this.panel1.Location = new System.Drawing.Point(30, 274);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -131,25 +131,25 @@
             this.BTN_Order.Text = "ĐẶT HÀNG";
             this.BTN_Order.Click += new System.EventHandler(this.BTN_Order_Click);
             // 
-            // BTN_bill
+            // BTN_QuanlyKH
             // 
-            this.BTN_bill.AutoRoundedCorners = true;
-            this.BTN_bill.BorderRadius = 31;
-            this.BTN_bill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_bill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BTN_bill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BTN_bill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BTN_bill.FillColor = System.Drawing.Color.DarkSlateBlue;
-            this.BTN_bill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_bill.ForeColor = System.Drawing.Color.White;
-            this.BTN_bill.Image = global::QuanLyBanHang.Properties.Resources.receipt;
-            this.BTN_bill.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BTN_bill.Location = new System.Drawing.Point(11, 232);
-            this.BTN_bill.Margin = new System.Windows.Forms.Padding(4);
-            this.BTN_bill.Name = "BTN_bill";
-            this.BTN_bill.Size = new System.Drawing.Size(268, 65);
-            this.BTN_bill.TabIndex = 2;
-            this.BTN_bill.Text = "IN HÓA ĐƠN";
+            this.BTN_QuanlyKH.AutoRoundedCorners = true;
+            this.BTN_QuanlyKH.BorderRadius = 31;
+            this.BTN_QuanlyKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_QuanlyKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTN_QuanlyKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTN_QuanlyKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTN_QuanlyKH.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BTN_QuanlyKH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_QuanlyKH.ForeColor = System.Drawing.Color.White;
+            this.BTN_QuanlyKH.Image = global::QuanLyBanHang.Properties.Resources.receipt;
+            this.BTN_QuanlyKH.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTN_QuanlyKH.Location = new System.Drawing.Point(11, 232);
+            this.BTN_QuanlyKH.Margin = new System.Windows.Forms.Padding(4);
+            this.BTN_QuanlyKH.Name = "BTN_QuanlyKH";
+            this.BTN_QuanlyKH.Size = new System.Drawing.Size(268, 65);
+            this.BTN_QuanlyKH.TabIndex = 2;
+            this.BTN_QuanlyKH.Text = "QuanLyKHachHang";
             // 
             // BTN_ADD
             // 
@@ -389,7 +389,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton BTN_minimize;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button BTN_ADD;
-        private Guna.UI2.WinForms.Guna2Button BTN_bill;
+        private Guna.UI2.WinForms.Guna2Button BTN_QuanlyKH;
         private Guna.UI2.WinForms.Guna2Button BTN_Order;
         private Guna.UI2.WinForms.Guna2Button BTN_DELETE;
         private Guna.UI2.WinForms.Guna2Button BTN_ItemList;
