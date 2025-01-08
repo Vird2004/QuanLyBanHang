@@ -22,6 +22,10 @@ namespace QuanLyBanHang.DAL.Entities
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ChucVu>()

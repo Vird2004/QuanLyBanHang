@@ -26,7 +26,7 @@ namespace QuanLyBanHang
         {
             Main main = new Main();
             this.Close();
-            main.ShowDialog();
+            main.Show();
         }
 
         private void BTN_add_fix_Click(object sender, EventArgs e)

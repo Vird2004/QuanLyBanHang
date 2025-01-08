@@ -22,7 +22,7 @@ namespace QuanLyBanHang
     {
         private readonly HangHoaService hangHoaService = new HangHoaService();
 
-        public string Avatar { get; private set; }
+        
 
         public Main()
         {
@@ -98,7 +98,9 @@ namespace QuanLyBanHang
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            QlyDDH qlyDDH = new QlyDDH();
+            this.Close();
+            qlyDDH.ShowDialog();
         }
 
         public void setGridViewStyle(DataGridView dgview)
@@ -157,7 +159,9 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void BTN_Order_Click(object sender, EventArgs e)
         {
-
+            DatHang datHang = new DatHang();
+            this.Close();
+            datHang.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

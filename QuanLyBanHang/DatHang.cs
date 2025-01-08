@@ -7,29 +7,283 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyBanHang.BUS;
+using QuanLyBanHang.DAL.Entities;
 
 namespace QuanLyBanHang
 {
     public partial class DatHang : Form
     {
+        private readonly HangHoaService hangHoaService = new HangHoaService();
+        private readonly OrderService orderService = new OrderService();
+        private readonly HoaDonService hoaDonService = new HoaDonService();
         public DatHang()
         {
             InitializeComponent();
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void DatHang_Load(object sender, EventArgs e)
         {
+            try
+            {
+                setGridViewStyle(dgvHH);
+                var listHangHoa = hangHoaService.GetAllHangHoa();
+                BindGrid(listHangHoa);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối CSDL: " + ex.Message + "\n" + ex.InnerException?.Message);
+            }
+            UpdateProductComboBox();
+        }
+        public void setGridViewStyle(DataGridView dgview)
+        {
+            dgview.BorderStyle = BorderStyle.None;
+            dgview.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgview.CellBorderStyle =
+DataGridViewCellBorderStyle.SingleHorizontal;
+            dgview.BackgroundColor = Color.White;
+            dgview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+        private void BindGrid(List<HangHoa> listHangHoa)
+        {
+            dgvHH.Rows.Clear();
+            foreach (var item in listHangHoa)
+            {
+                int index = dgvHH.Rows.Add();
+                dgvHH.Rows[index].Cells[0].Value = item.MaHH;
+                dgvHH.Rows[index].Cells[1].Value = item.TenHH;
+                dgvHH.Rows[index].Cells[2].Value = item.SoLuong;
+                dgvHH.Rows[index].Cells[3].Value = item.DVT;
+                dgvHH.Rows[index].Cells[4].Value = item.GiaBan;
+                
+
+                // Assuming you want to pass a specific image name for each item
+                //  ShowAvatar(PICBOX_PROFILE, item.Avatar);
+            }
+        }
+        private void UpdateProductComboBox()
+        {
+            // Lấy danh sách sản phẩm từ dịch vụ
+            var products = hangHoaService.GetAllHangHoa(); // Giả định hàm này trả về danh sách sản phẩm
+
+            // Xóa các mục cũ trong ComboBox
+            cbSanPham.Items.Clear();
+
+            // Thêm các sản phẩm mới vào ComboBox
+            foreach (var product in products)
+            {
+                cbSanPham.Items.Add(product.TenHH);
+            }
+
+            // Chọn mục đầu tiên mặc định
+            if (cbSanPham.Items.Count > 0)
+            {
+                cbSanPham.SelectedIndex = 0;
+            }
+        }
+
+        private void dgvHH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dgvDDH.Rows[e.RowIndex];
+
+                // Hiển thị thông tin lên các ô nhập liệu
+                txtName.Text = selectedRow.Cells[0].Value?.ToString();
+                cbSanPham.SelectedItem = selectedRow.Cells[1].Value?.ToString();
+                numSL.Value = Convert.ToInt32(selectedRow.Cells[2].Value ?? 0);
+            }
 
         }
 
-        private void DTG_DatHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnSaveDH_Click(object sender, EventArgs e)
+        {
+            using (var context = new ModelBanHangDB())
+            {
+                // Tạo mã đơn hàng mới
+             //   string newOrderID = GenerateOrderID();
+
+                // Lưu đơn hàng
+                var newOrder = new Order
+                {
+                   // OrderID = int.Parse(newOrderID), // Convert string to int
+                    CustomerName = txtName.Text.Trim(), // Lấy tên khách hàng từ textbox
+                    OrderDate = DateTime.Now
+                };
+                context.Orders.Add(newOrder);
+
+                // Lưu chi tiết đơn hàng
+                foreach (DataGridViewRow row in dgvDDH.Rows)
+                {
+                    if (row.Cells[1].Value != null)
+                    {
+                        var orderDetail = new OrderDetail
+                        {
+                           // OrderID = int.Parse(newOrderID),
+                            MaHH = row.Cells[0].Value.ToString(),
+                            SoLuong = int.Parse(row.Cells[3].Value.ToString()),
+                            DonGia = decimal.Parse(row.Cells[4].Value.ToString())
+                        };
+                        context.OrderDetails.Add(orderDetail);
+                    }
+                }
+
+                context.SaveChanges();
+                MessageBox.Show("Lưu đơn hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private decimal GetProductPrice(string productName)
+        {
+            var product = hangHoaService.GetHangHoaByName(productName);
+            return (decimal)(product?.GiaBan ?? 0); // Giả định `Gia` là trường giá của sản phẩm
+        }
+        private void ClearInputFields()
+        {
+            txtName.Clear();
+            cbSanPham.SelectedIndex = -1;
+            numSL.Value = 0;
+        }
+
+        private void dgvDDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void BTN_EXIT_Click(object sender, EventArgs e)
+        private void lblTotal_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btnAdd_Change_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem dữ liệu đầu vào có hợp lệ không
+            if (string.IsNullOrEmpty(txtName.Text) || cbSanPham.SelectedItem == null || numSL.Value <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra xem sản phẩm đã có trong danh sách chưa
+            var existingRow = dgvDDH.Rows.Cast<DataGridViewRow>()
+                .FirstOrDefault(row => row.Cells[0].Value?.ToString() == txtName.Text
+                                       && row.Cells[1].Value?.ToString() == cbSanPham.SelectedItem.ToString());
+
+            if (existingRow != null)
+            {
+                // Nếu sản phẩm đã có, chỉ cập nhật số lượng và tổng giá
+                existingRow.Cells[2].Value = (int)existingRow.Cells[2].Value + (int)numSL.Value; // Update quantity
+                existingRow.Cells[4].Value = (int)existingRow.Cells[2].Value * Convert.ToDecimal(existingRow.Cells[3].Value); // Update total price
+            }
+            else
+            {
+                // Thêm dòng mới nếu sản phẩm chưa có trong danh sách
+                dgvDDH.Rows.Add(
+                    txtName.Text,                                 // Tên khách hàng
+                    cbSanPham.SelectedItem.ToString(),           // Tên sản phẩm
+                    (int)numSL.Value,                            // Số lượng
+                    GetProductPrice(cbSanPham.SelectedItem.ToString()), // Giá sản phẩm
+                    (int)numSL.Value * GetProductPrice(cbSanPham.SelectedItem.ToString()) // Tổng giá
+                );
+            }
+
+            // Cập nhật tổng tiền trong lblTotal
+            UpdateTotalAmount();
+
+            // Làm sạch các ô nhập liệu
+            ClearInputFields();
+        }
+
+        private void UpdateTotalAmount()
+        {
+            decimal totalAmount = 0;
+
+            // Duyệt qua các dòng trong dgvDDH và tính tổng giá
+            foreach (DataGridViewRow row in dgvDDH.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                {
+                    totalAmount += Convert.ToDecimal(row.Cells[4].Value); // Cộng dồn tổng giá trị
+                }
+            }
+
+            // Cập nhật tổng tiền vào lblTotal
+            lblTotal.Text = "Tổng tiền: " + totalAmount.ToString("C");
+        }
+        private void numSL_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra xem có dòng nào được chọn không
+            if (dgvDDH.CurrentRow != null && dgvDDH.CurrentRow.Index >= 0)
+            {
+                dgvDDH.Rows.RemoveAt(dgvDDH.CurrentRow.Index);
+                MessageBox.Show("Xóa thành công!", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn dòng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            this.Close();
+            main.ShowDialog();
+        }
+        private void UpdateOrderGridView()
+        {
+            var orders = hangHoaService.GetAllOrders();
+            dgvDDH.Rows.Clear();
+
+            foreach (var order in orders)
+            {
+                foreach (var detail in order.OrderDetails)
+                {
+                    dgvDDH.Rows.Add(order.OrderID, order.CustomerName, detail.MaHH, detail.SoLuong, detail.DonGia, detail.ThanhTien);
+                }
+            }
+        }
+
+        private string GenerateOrderID()
+        {
+            // Kết nối cơ sở dữ liệu để lấy danh sách đơn hàng
+            using (var context = new ModelBanHangDB())
+            {
+                var lastOrder = context.Orders.OrderByDescending(o => o.OrderID).FirstOrDefault();
+
+                if (lastOrder != null)
+                {
+                    // Lấy phần số trong mã đơn hàng cuối cùng
+                    string lastNumber = lastOrder.OrderID.ToString().Substring(2);
+                    int newNumber = int.Parse(lastNumber) + 1;
+                    return "DH" + newNumber.ToString("D4"); // Format thành 4 chữ số
+                }
+            }
+            return "DH0001"; // Nếu chưa có đơn hàng
+        }
+
+
     }
 }

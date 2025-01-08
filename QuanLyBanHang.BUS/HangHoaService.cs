@@ -49,5 +49,59 @@ namespace QuanLyBanHang.BUS
             context.HangHoas.Remove(h);
             context.SaveChanges();
         }
+
+        //lay danh sach hang hoa theo ten
+        public List<HangHoa> Search(string tenHH)
+        {
+            return modelBanHang.HangHoas.Where(p => p.TenHH.Contains(tenHH)).ToList();
+        }
+        //Lay hang hoa theo ten
+        public HangHoa GetHangHoaByName(string tenHH)
+        {
+            return modelBanHang.HangHoas.FirstOrDefault(p => p.TenHH == tenHH);
+        }
+
+        //luu hang hoa
+        public void Save(HangHoa h)
+        {
+            modelBanHang.HangHoas.Add(h);
+            modelBanHang.SaveChanges();
+        }
+
+        private List<Order> orderList = new List<Order>();
+
+        // Save order
+        public bool SaveOrder(string customerName, List<OrderDetail> orderDetails)
+        {
+            try
+            {
+                // Tạo đơn hàng mới
+                var newOrder = new Order
+                {
+                    CustomerName = customerName,
+                    OrderDate = DateTime.Now,
+                    OrderDetails = orderDetails
+                };
+
+                // Lưu đơn hàng vào cơ sở dữ liệu
+                modelBanHang.Orders.Add(newOrder);
+                modelBanHang.SaveChanges();
+
+                return true; // Lưu thành công
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi
+                Console.WriteLine(ex.Message);
+                return false; // Lưu thất bại
+            }
+        }
+
+        // Method to retrieve all orders
+        public List<Order> GetAllOrders()
+        {
+            return orderList;
+        }
+
     }
 }
