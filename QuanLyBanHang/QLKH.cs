@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyBanHang
 {
-    public partial class HoaDon : Form
+    public partial class QLKH : Form
     {
-        public HoaDon()
+        public QLKH()
         {
             InitializeComponent();
         }
-
-        public string MaHD { get; internal set; }
-        public string TenKhachHang { get; internal set; }
-        public DateTime NgayTao { get; internal set; }
-        public object TongTien { get; internal set; }
     }
 }

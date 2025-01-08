@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,16 @@ namespace QuanLyBanHang
 
         private void DatHang_Load(object sender, EventArgs e)
         {
+            // Kiểm tra và tạo thư mục nếu chưa tồn tại
+            string folderPath = Path.Combine(Application.StartupPath, "HoaDon"); // Thư mục "HoaDon" trong thư mục ứng dụng
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath); // Tạo thư mục
+            }
+
+            // Đường dẫn file CSV
+            string filePath = Path.Combine(folderPath, "hoa_don.csv");
+
             try
             {
                 setGridViewStyle(dgvHH);
@@ -105,38 +116,100 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void btnSaveDH_Click(object sender, EventArgs e)
         {
-            using (var context = new ModelBanHangDB())
+            if (dgvDDH.Rows.Count == 0)
             {
-                // Tạo mã đơn hàng mới
-             //   string newOrderID = GenerateOrderID();
+                MessageBox.Show("Không có dữ liệu để lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                // Lưu đơn hàng
-                var newOrder = new Order
+            try
+            {
+                // Kiểm tra và tạo folder nếu chưa tồn tại
+                string folderPath = Path.Combine(Application.StartupPath, "DonHang");
+                if (!Directory.Exists(folderPath))
                 {
-                   // OrderID = int.Parse(newOrderID), // Convert string to int
-                    CustomerName = txtName.Text.Trim(), // Lấy tên khách hàng từ textbox
-                    OrderDate = DateTime.Now
-                };
-                context.Orders.Add(newOrder);
+                    Directory.CreateDirectory(folderPath);
+                }
 
-                // Lưu chi tiết đơn hàng
-                foreach (DataGridViewRow row in dgvDDH.Rows)
+                // Tạo tên file CSV (dùng mã đơn hàng làm tên file)
+                string orderID = GenerateOrderID();
+                string filePath = Path.Combine(folderPath, $"{orderID}.csv");
+
+                // Mở file CSV để ghi dữ liệu
+                using (StreamWriter writer = new StreamWriter(filePath))
                 {
-                    if (row.Cells[1].Value != null)
+                    // Ghi dòng đầu tiên: tiêu đề cột
+                    writer.WriteLine("MaDonHang,TenKhachHang,SanPham,SoLuong,DonGia,ThanhTien");
+
+                    // Ghi dữ liệu từ DataGridView
+                    foreach (DataGridViewRow row in dgvDDH.Rows)
                     {
-                        var orderDetail = new OrderDetail
+                        if (row.Cells[0].Value != null) // Chỉ ghi các dòng có dữ liệu
                         {
-                           // OrderID = int.Parse(newOrderID),
-                            MaHH = row.Cells[0].Value.ToString(),
-                            SoLuong = int.Parse(row.Cells[3].Value.ToString()),
-                            DonGia = decimal.Parse(row.Cells[4].Value.ToString())
-                        };
-                        context.OrderDetails.Add(orderDetail);
+                            writer.WriteLine($"{orderID}," +
+                                $"{row.Cells[0].Value}," +
+                                $"{row.Cells[1].Value}," +
+                                $"{row.Cells[2].Value}," +
+                                $"{row.Cells[3].Value}," +
+                                $"{row.Cells[4].Value}");
+                        }
                     }
                 }
 
-                context.SaveChanges();
                 MessageBox.Show("Lưu đơn hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lưu đơn hàng: {ex.Message}\nChi tiết: {ex.InnerException?.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+        private decimal CalculateTotal()
+        {
+            decimal total = 0;
+
+            // Duyệt qua từng dòng trong DataGridView
+            foreach (DataGridViewRow row in dgvDDH.Rows)
+            {
+                if (row.Cells[4].Value != null)
+                {
+                    // Cộng dồn giá trị cột "Tổng giá" (cột thứ 4)
+                    total += Convert.ToDecimal(row.Cells[4].Value);
+                }
+            }
+
+            return total;
+        }
+
+
+        private void SaveDataToCSV(string orderId)
+        {
+            // Đường dẫn thư mục lưu hóa đơn
+            string folderPath = Path.Combine(Application.StartupPath, "HoaDon");
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            // Tên file CSV dựa trên mã hóa đơn
+            string filePath = Path.Combine(folderPath, $"{orderId}.csv");
+
+            // Ghi dữ liệu từ dgvDDH vào file
+            using (StreamWriter sw = new StreamWriter(filePath))
+            {
+                // Ghi tiêu đề cột
+                sw.WriteLine("Tên khách hàng,Tên sản phẩm,Số lượng,Đơn giá,Tổng giá");
+
+                // Ghi dữ liệu từng dòng
+                foreach (DataGridViewRow row in dgvDDH.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        sw.WriteLine($"{row.Cells[0].Value},{row.Cells[1].Value},{row.Cells[2].Value},{row.Cells[3].Value},{row.Cells[4].Value}");
+                    }
+                }
             }
         }
 
@@ -271,17 +344,17 @@ DataGridViewCellBorderStyle.SingleHorizontal;
             // Kết nối cơ sở dữ liệu để lấy danh sách đơn hàng
             using (var context = new ModelBanHangDB())
             {
-                var lastOrder = context.Orders.OrderByDescending(o => o.OrderID).FirstOrDefault();
+                var lastOrder = context.HoaDons.OrderByDescending(o => o.MaHD).FirstOrDefault();
 
                 if (lastOrder != null)
                 {
                     // Lấy phần số trong mã đơn hàng cuối cùng
-                    string lastNumber = lastOrder.OrderID.ToString().Substring(2);
+                    string lastNumber = lastOrder.MaHD.ToString().Substring(2);
                     int newNumber = int.Parse(lastNumber) + 1;
-                    return "DH" + newNumber.ToString("D4"); // Format thành 4 chữ số
+                    return "HD" + newNumber.ToString("D4"); // Format thành 4 chữ số
                 }
             }
-            return "DH0001"; // Nếu chưa có đơn hàng
+            return "HD0001"; // Nếu chưa có đơn hàng
         }
 
 
