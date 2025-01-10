@@ -198,8 +198,12 @@ DataGridViewCellBorderStyle.SingleHorizontal;
 
         private void BTN_bill_Click(object sender, EventArgs e)
         {
-
+            QLKH qLKH = new QLKH();
+            this.Close();
+            qLKH.ShowDialog();
         }
+
+        
     }
 }
 //Scaffold-DbContext "DESKTOP-F44V7B6\SQLEXPRESS" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities

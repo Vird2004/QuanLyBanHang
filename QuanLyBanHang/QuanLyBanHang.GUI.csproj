@@ -235,6 +235,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLKH.resx">
+      <DependentUpon>QLKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QlyDDH.resx">
       <DependentUpon>QlyDDH.cs</DependentUpon>
     </EmbeddedResource>

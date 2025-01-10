@@ -41,6 +41,6 @@ namespace QuanLyBanHang.DAL.Entities
         public virtual NhanVien NhanVien { get; set; }
 
         public virtual KhachHang KhachHang { get; set; }
-        
+        public object MaSanPham { get; set; }
     }
 }
