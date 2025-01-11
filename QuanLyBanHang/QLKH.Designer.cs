@@ -63,7 +63,7 @@
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.RowHeadersWidth = 51;
             this.dgvKH.RowTemplate.Height = 24;
-            this.dgvKH.Size = new System.Drawing.Size(528, 505);
+            this.dgvKH.Size = new System.Drawing.Size(664, 505);
             this.dgvKH.TabIndex = 0;
             // 
             // MaKH
@@ -235,7 +235,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(864, 539);
+            this.ClientSize = new System.Drawing.Size(1000, 539);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvKH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
