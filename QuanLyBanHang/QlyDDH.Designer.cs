@@ -50,7 +50,7 @@
             this.NgayDat,
             this.SLg,
             this.TT});
-            this.dgvOrder.Location = new System.Drawing.Point(12, 56);
+            this.dgvOrder.Location = new System.Drawing.Point(6, 56);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 51;
             this.dgvOrder.RowTemplate.Height = 24;
