@@ -103,6 +103,7 @@
             // 
             // panel
             // 
+            this.panel.BackColor = System.Drawing.Color.MediumPurple;
             this.panel.Controls.Add(this.btnReturn);
             this.panel.Controls.Add(this.btnDel);
             this.panel.Controls.Add(this.btnAdd_Change);
