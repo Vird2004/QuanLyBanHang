@@ -42,6 +42,7 @@
             // dgvOrder
             // 
             this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrder.BackgroundColor = System.Drawing.Color.MediumPurple;
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDH,
@@ -49,11 +50,11 @@
             this.NgayDat,
             this.SLg,
             this.TT});
-            this.dgvOrder.Location = new System.Drawing.Point(12, 40);
+            this.dgvOrder.Location = new System.Drawing.Point(12, 56);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersWidth = 51;
             this.dgvOrder.RowTemplate.Height = 24;
-            this.dgvOrder.Size = new System.Drawing.Size(898, 445);
+            this.dgvOrder.Size = new System.Drawing.Size(898, 429);
             this.dgvOrder.TabIndex = 0;
             // 
             // MaDH
@@ -93,32 +94,40 @@
             // 
             // btnReturn
             // 
+            this.btnReturn.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnReturn.Location = new System.Drawing.Point(12, 11);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(75, 23);
+            this.btnReturn.Size = new System.Drawing.Size(121, 39);
             this.btnReturn.TabIndex = 1;
             this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnPrintInvoice
             // 
-            this.btnPrintInvoice.Location = new System.Drawing.Point(774, 11);
+            this.btnPrintInvoice.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnPrintInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintInvoice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPrintInvoice.Location = new System.Drawing.Point(715, 12);
             this.btnPrintInvoice.Name = "btnPrintInvoice";
-            this.btnPrintInvoice.Size = new System.Drawing.Size(108, 23);
+            this.btnPrintInvoice.Size = new System.Drawing.Size(195, 39);
             this.btnPrintInvoice.TabIndex = 2;
             this.btnPrintInvoice.Text = "In Hóa Đơn";
-            this.btnPrintInvoice.UseVisualStyleBackColor = true;
+            this.btnPrintInvoice.UseVisualStyleBackColor = false;
             this.btnPrintInvoice.Click += new System.EventHandler(this.btnPrintInvoice_Click);
             // 
             // QlyDDH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(916, 497);
             this.Controls.Add(this.btnPrintInvoice);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.dgvOrder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QlyDDH";
             this.Text = "QlyDDH";
             this.Load += new System.EventHandler(this.QlyDDH_Load);

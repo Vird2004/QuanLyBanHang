@@ -221,7 +221,7 @@
             this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Location = new System.Drawing.Point(151, 343);
+            this.guna2TextBox7.Location = new System.Drawing.Point(153, 372);
             this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox7.Name = "guna2TextBox7";
             this.guna2TextBox7.PasswordChar = '\0';
@@ -244,7 +244,7 @@
             this.TXT_MaKho.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TXT_MaKho.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXT_MaKho.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_MaKho.Location = new System.Drawing.Point(151, 287);
+            this.TXT_MaKho.Location = new System.Drawing.Point(153, 316);
             this.TXT_MaKho.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXT_MaKho.Name = "TXT_MaKho";
             this.TXT_MaKho.PasswordChar = '\0';
@@ -267,7 +267,7 @@
             this.TXT_GiaBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TXT_GiaBan.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXT_GiaBan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_GiaBan.Location = new System.Drawing.Point(151, 230);
+            this.TXT_GiaBan.Location = new System.Drawing.Point(153, 259);
             this.TXT_GiaBan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXT_GiaBan.Name = "TXT_GiaBan";
             this.TXT_GiaBan.PasswordChar = '\0';
@@ -290,7 +290,7 @@
             this.TXT_DVT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TXT_DVT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXT_DVT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_DVT.Location = new System.Drawing.Point(151, 186);
+            this.TXT_DVT.Location = new System.Drawing.Point(153, 215);
             this.TXT_DVT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXT_DVT.Name = "TXT_DVT";
             this.TXT_DVT.PasswordChar = '\0';
@@ -313,7 +313,7 @@
             this.TXT_TMH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TXT_TMH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXT_TMH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_TMH.Location = new System.Drawing.Point(151, 84);
+            this.TXT_TMH.Location = new System.Drawing.Point(153, 113);
             this.TXT_TMH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXT_TMH.Name = "TXT_TMH";
             this.TXT_TMH.PasswordChar = '\0';
@@ -336,7 +336,7 @@
             this.TXT_SL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TXT_SL.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXT_SL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_SL.Location = new System.Drawing.Point(151, 136);
+            this.TXT_SL.Location = new System.Drawing.Point(153, 165);
             this.TXT_SL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXT_SL.Name = "TXT_SL";
             this.TXT_SL.PasswordChar = '\0';
@@ -359,7 +359,7 @@
             this.TXT_MMH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TXT_MMH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXT_MMH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TXT_MMH.Location = new System.Drawing.Point(151, 40);
+            this.TXT_MMH.Location = new System.Drawing.Point(153, 69);
             this.TXT_MMH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXT_MMH.Name = "TXT_MMH";
             this.TXT_MMH.PasswordChar = '\0';
@@ -380,7 +380,7 @@
             this.BTN_back.FillColor = System.Drawing.Color.DarkSlateBlue;
             this.BTN_back.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_back.ForeColor = System.Drawing.Color.White;
-            this.BTN_back.Location = new System.Drawing.Point(269, 403);
+            this.BTN_back.Location = new System.Drawing.Point(271, 446);
             this.BTN_back.Name = "BTN_back";
             this.BTN_back.Size = new System.Drawing.Size(111, 45);
             this.BTN_back.TabIndex = 16;
@@ -399,7 +399,7 @@
             this.BTN_DELETE.FillColor = System.Drawing.Color.DarkSlateBlue;
             this.BTN_DELETE.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_DELETE.ForeColor = System.Drawing.Color.White;
-            this.BTN_DELETE.Location = new System.Drawing.Point(135, 403);
+            this.BTN_DELETE.Location = new System.Drawing.Point(137, 446);
             this.BTN_DELETE.Name = "BTN_DELETE";
             this.BTN_DELETE.Size = new System.Drawing.Size(111, 45);
             this.BTN_DELETE.TabIndex = 15;
@@ -418,7 +418,7 @@
             this.BTN_add_fix.FillColor = System.Drawing.Color.DarkSlateBlue;
             this.BTN_add_fix.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_add_fix.ForeColor = System.Drawing.Color.White;
-            this.BTN_add_fix.Location = new System.Drawing.Point(3, 403);
+            this.BTN_add_fix.Location = new System.Drawing.Point(9, 446);
             this.BTN_add_fix.Name = "BTN_add_fix";
             this.BTN_add_fix.Size = new System.Drawing.Size(111, 45);
             this.BTN_add_fix.TabIndex = 14;
@@ -431,7 +431,7 @@
             this.label7.BackColor = System.Drawing.Color.MediumPurple;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(3, 350);
+            this.label7.Location = new System.Drawing.Point(5, 379);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 20);
             this.label7.TabIndex = 6;
@@ -443,7 +443,7 @@
             this.label6.BackColor = System.Drawing.Color.MediumPurple;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(67, 296);
+            this.label6.Location = new System.Drawing.Point(69, 325);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
             this.label6.TabIndex = 5;
@@ -455,7 +455,7 @@
             this.label5.BackColor = System.Drawing.Color.MediumPurple;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(67, 240);
+            this.label5.Location = new System.Drawing.Point(69, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 4;
@@ -467,7 +467,7 @@
             this.label4.BackColor = System.Drawing.Color.MediumPurple;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(42, 193);
+            this.label4.Location = new System.Drawing.Point(44, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 20);
             this.label4.TabIndex = 3;
@@ -479,7 +479,7 @@
             this.label3.BackColor = System.Drawing.Color.MediumPurple;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(60, 140);
+            this.label3.Location = new System.Drawing.Point(62, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 2;
@@ -492,7 +492,7 @@
             this.label2.BackColor = System.Drawing.Color.MediumPurple;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(21, 92);
+            this.label2.Location = new System.Drawing.Point(23, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 1;
@@ -504,7 +504,7 @@
             this.label1.BackColor = System.Drawing.Color.MediumPurple;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(28, 49);
+            this.label1.Location = new System.Drawing.Point(30, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 0;
