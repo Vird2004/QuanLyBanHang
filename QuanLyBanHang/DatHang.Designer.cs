@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnReturn = new System.Windows.Forms.Button();
             this.btnSaveDH = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd_Change = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -75,19 +75,6 @@
             this.groupBox1.Text = "Quan ly don hang";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReturn.Location = new System.Drawing.Point(47, 303);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(224, 32);
-            this.btnReturn.TabIndex = 12;
-            this.btnReturn.Text = "Quay lại";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
             // btnSaveDH
             // 
             this.btnSaveDH.BackColor = System.Drawing.Color.DarkSlateBlue;
@@ -117,6 +104,19 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(316, 347);
             this.panel.TabIndex = 10;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReturn.Location = new System.Drawing.Point(47, 303);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(224, 32);
+            this.btnReturn.TabIndex = 12;
+            this.btnReturn.Text = "Quay lại";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnDel
             // 
